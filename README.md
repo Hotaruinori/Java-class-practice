@@ -1,16 +1,15 @@
-Quick setup — if you’ve done this kind of thing before：
+1. Quick setup — if you’ve done this kind of thing before：
 
 https://github.com/Hotaruinori/Java-class-practice.git
-
 git@github.com:Hotaruinori/Java-class-practice.git
 
-push an existing repository from the command line：
+2. push an existing repository from the command line：
 
 git remote add origin httpsgithub.comHotaruinoriJava-class-practice.git
 git branch -M main
 git push -u origin main
 
-create a new repository on the command line：
+3. create a new repository on the command line：
 echo "# Java-class-practice" >> README.md
 git init
 git add README.md
