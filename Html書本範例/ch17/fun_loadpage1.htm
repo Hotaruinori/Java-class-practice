@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script>
+$(document).on("pageshow", function(){
+	$.mobile.loadPage("fun_loadpage2.htm");
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header">
+  	<h1>LoadPage Function</h1>
+  </div>
+  <div data-role="content">
+  	<a href="#page2" data-role="button">顯示訊息</a>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

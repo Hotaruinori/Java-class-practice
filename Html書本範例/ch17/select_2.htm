@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" data-position="fixed">
+    <h1>Select</h1>
+  </div>
+  <div data-role="content">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>選擇設備(可多選):</legend>
+      <input type="checkbox" name="checkbox-1" id="checkbox-1" checked="">
+      <label for="checkbox-1">設備1</label>
+      <input type="checkbox" name="checkbox-2" id="checkbox-2">
+      <label for="checkbox-2">設備2</label>
+      <input type="checkbox" name="checkbox-3" id="checkbox-3">
+      <label for="checkbox-3">設備3</label>
+    </fieldset>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>選擇配備(單選):</legend>
+      <input type="radio" name="radio-select" id="radio-1" value="1" checked="">
+      <label for="radio-1">配備1</label>
+      <input type="radio" name="radio-select" id="radio-2" value="2">
+      <label for="radio-2">配備2</label>
+      <input type="radio" name="radio-select" id="radio-3" value="3">
+      <label for="radio-3">配備3</label>
+    </fieldset>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

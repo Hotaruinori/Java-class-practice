@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--注意，區域標籤的高度預設為自動，若要設定內層容器的區域標籤為指定的百分比，必須滿足以下條件：
+1. html 主動設定高度為100%
+2. body 主動設定高度為100%
+以上設定缺一不可。
+-->
+<html lang="zh" style="height: 100%;">
+    <head>
+        <meta charset="utf-8" />
+        <title>蘭嶼。微旅行</title>
+    </head>
+    <!--body、h1、h2、ul、p、ol會有上下間距-->
+    <body style="margin: 0; height: 100%;" >
+        <!--區域標籤特色：
+        1. 寬度沒有設定時，會自動設定為寬度100%; 
+        2. 高度沒有設定時，高度會自動包覆內容，也就是內容到哪高度到哪。
+        -->
+        <div id = header style="background-color: aquamarine;">
+            <!--水平至中為 text-align-->
+            <h1 style="background-color: rgb(162, 188, 245); margin: 0;text-align: center;">蘭嶼。微旅行</h1>
+            <div id = nav style="background-color: rgb(245, 162, 220); text-align: center;">
+                <!--消除前面ul的空格用padding-->
+                <ul style="background-color: rgb(233, 245, 162); margin: 0; padding: 0;">
+                    <!--要讓li的換行特性消除，用display.inline，但會取消前面的點-->
+                    <li style="display: inline;"><a href='index.html'>首頁</a></li>
+                    <li style="display: inline;"><a href='travel.html'>旅遊路線</a></li>
+                    <li style="display: inline;"><a href='blog.html'>旅人微博</a></li>
+                    <li style="display: inline;"><a href='about.html'>相關資訊</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id = leftlist style="background-color: blueviolet; float: left; width: 10%; height: 95%;">
+            <h4 style="background-color: rgb(212, 162, 245); margin: 0;">交通方式</h2>
+            <ol style="background-color: rgb(162, 240, 245); margin: 0;">
+                <li><a href="flight.html">飛機</a></li>
+                <li><a href="boat.html">遊艇</a></li>
+                <li><a href="swim.html">游泳</a></li>
+            </ol>
+        </div>
+        <div id = article style="background-color: beige; float: left; width: 70%; height: 95%">
+            <h2 style="background-color: rgb(162, 188, 245); margin: 0;">旅人微博</h2>
+            <div id = section style="background-color: rgb(245, 162, 194);">
+                
+                <p style="background-color: rgb(223, 245, 162); margin: 0;">
+                    位在台東外海的蘭嶼島，四週不僅擁有清澈湛藍的海洋，本島的陸地上矗立林木森天的原野。
+                    位在台東外海的綠島，被放生。 <br>
+                    位在台東外海的蘭嶼島，四週不僅擁有清澈湛藍的海洋，本島的陸地上矗立林木森天的原野。
+                    位在台東外海的綠島，被放生。 <br>
+                    位在台東外海的蘭嶼島，四週不僅擁有清澈湛藍的海洋，本島的陸地上矗立林木森天的原野。
+                    位在台東外海的綠島，被放生。 <br>
+                
+                </p>
+            </div>
+        </div>
+        <!--浮動通常都用同一邊，但是百分比要算好-->
+        <div id = aside style="background-color: chartreuse; float: left; width: 20%; height: 95%">
+            <h2 style="background-color: rgb(245, 186, 162); margin: 0;">推薦景點</h2>
+            <ol style="background-color: rgb(162, 240, 245); margin: 0;">
+                <li><a href="travel1.html">饅頭岩</a></li>
+                <li><a href="travel2.html">蘭嶼燈塔</a></li>
+                <li><a href="travel3.html">軍艦岩</a></li>
+            </ol>
+        </div>
+        <div id= footer style="background-color: rgb(162, 188, 245); clear: both; ">
+            蘭嶼。微旅行 版權所有
+        </div>
+    </body>
+</html>	

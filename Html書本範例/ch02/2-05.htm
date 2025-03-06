@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>範例</title>
+	</head>
+	<body>
+	<!--這邊把float常使用 left 或 right，功能為向上浮動一層後向指定方向排列，
+		如下方文字從空隙推上來，則在下方文字使用clear來清除浮動效果，其使用both可以不指定方向-->
+	<!--這邊把margin間距歸零，之後再去微調-->
+	<!--文字(內容)可以用color, 但標線(非內容的東西)要改用border-color, -->
+	<!--文字裝飾線用text-decoration-line,但與文字的間距似乎無法調開, 另外裝飾線的顏色是和文字一起的-->
+	<h3 style="margin: 0; color: navy;">靜夜思  李白</h3> 
+	<h3 style="margin: 0; color: rgb(128, 0, 0); text-decoration-line: underline;">靜夜思  李白</h3> 
+	<hr style="width: 200px; float: left; border-color: navy;
+				margin: 0; margin-top: 20px; margin-bottom: 10px;">
+	<p style="clear: both; margin: 0;">
+	床前明月光，疑是地上霜。<br>
+	舉頭望明月，低頭思故鄉。<br>
+	</p>
+	<hr style="width: 200px; float: left;
+				margin: 0; margin-top: 10px; margin-bottom: 20px;">
+	<p style="clear: both; margin: 0;">
+	月光舖在床前的地上，
+	像是一層瑩白的濃霜。
+	抬頭眺望窗外的明月，
+	低頭思念久別的故鄉。
+	</p>
+	</body>
+</html>

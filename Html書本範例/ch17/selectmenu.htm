@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page">
+<div data-role="header" data-position="fixed">
+	<h1>SelectMenu</h1>
+</div>
+<div data-role="content">
+	<form>
+	<label for="selectmenu">請從清單中選擇選項:</label>
+		<select name="selectmenu" id="selectmenu">
+		<option value="option1">選項 1</option>
+		<option value="option2">選項 2</option>
+		<option value="option3">選項 3</option>
+	</select>
+  
+	<label for="selectmenu">請從清單中選擇選項:</label>
+		<select name="selectmenu" id="selectmenu" data-native-menu="false">
+		<option value="option1">選項 1</option>
+		<option value="option2">選項 2</option>
+		<option value="option3">選項 3</option>
+	</select>
+	</form>
+</div>
+<div data-role="footer" data-position="fixed">
+	<h4>jQuery Mobile</h4>
+</div>
+</div>
+</body>
+</html>

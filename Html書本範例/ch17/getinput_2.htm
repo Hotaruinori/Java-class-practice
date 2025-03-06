@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button1").click(function(){
+		var msg = '開關切換：'+$('#iRange option:checked').val()+"\n";
+		msg += '單選選項：'+$('input[name=iSelect]:checked').val()+"\n";
+		var msg1 = '多選選項：';
+		$('input[type="checkbox"]:checked').each(function(){
+			msg1 += $(this).val() + ' ';
+		});
+		msg += msg1+"\n"; 
+		msg += '下拉式選單：'+$('#iMenu option:checked').val();			
+		alert(msg);
+	});
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" data-position="fixed">
+    <h1>表單</h1>
+  </div>
+  <div data-role="content">
+    <form>
+    <label for="iRange">開關切換:</label>
+    <select name="iRange" id="iRange" data-role="slider">
+      <option value="off">Off</option>
+      <option value="on">On</option>
+    </select>
+    <fieldset data-role="controlgroup">
+        <legend>單選選項:</legend>
+        <input type="radio" name="iSelect" id="iSelect1" value="選項1">
+        <label for="iSelect1">選項1</label>
+        <input type="radio" name="iSelect" id="iSelect2" value="選項2">
+        <label for="iSelect2">選項2</label>
+    </fieldset>    
+    <fieldset data-role="controlgroup">
+        <legend>多選選項:</legend>
+        <input type="checkbox" name="icheck1" id="icheck1" value="選項1">
+        <label for="icheck1">選項1</label>
+        <input type="checkbox" name="icheck2" id="icheck2" value="選項2">
+        <label for="icheck2">選項2</label>
+        <input type="checkbox" name="icheck3" id="icheck3" value="選項3">
+        <label for="icheck3">選項3</label>
+    </fieldset>
+    <label for="iMenu">下拉式選單:</label>
+    <select name="iMenu" id="iMenu">
+        <option value="選項1">選項1</option>
+        <option value="選項2">選項2</option>
+        <option value="選項3">選項3</option>
+    </select>         
+    <a href="#" data-role="button" id="button1">顯示</a>
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh" style="height: 100%;">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+		<title>範例</title>
+	
+	</head>
+	<body style="height: 100%;">
+		<!--百分比的高度要從外層一路下下來，否則內層超過的部分會失效-->
+		<div style="height: 100%;">
+			<div style="background-color: aqua; width: 256px;">
+				<h2 style="background-color: antiquewhite;">HTML5 標誌圖示</h2>
+				<!--注意:圖片原本周邊間距為0，但會有3像素的下和右的間格，或許是程式碼分段造成的bug，可以主動下負向的右和下間距解決-->
+				<!--補充：圖片alt屬性只有在圖片無法顯示時才會出現，如果需要說明文字，可以使用title屬性-->
+				<img src="images/HTML5.png" width="128" height="128"   title="HTML5 Logo alt="HTML5 Logo" style="background-color: blueviolet;"><img src="images/CSS3.png" width="128" height="128" alt="HTML5 Logo" style="background-color: blueviolet;">
+			</div>
+			<div style="background-color: aqua;" >
+				<h2 style="background-color: antiquewhite;">HTML5 標誌圖示</h2>
+				<img src="images/HTML5.png" width="128" height="128" alt="HTML5 Logo" style="background-color: blueviolet;">
+				<img src="images/CSS3.png" width="128" height="128" alt="HTML5 Logo" style="background-color: blueviolet;">
+			</div>
+			<div style="background-color: aqua; width: 60%;" >
+				<h2 style="background-color: antiquewhite;">HTML5 標誌圖示</h2>
+				<img src="images/mip_Pssst_.svg" width="50%"  alt="HTML5 Logo" style="background-color: blueviolet;"><img src="images/mip_Pssst_.svg" width="50%"  alt="HTML5 Logo" style="background-color: blueviolet;">
+			</div>
+			<div style="background-color: aqua;">
+				<h2 style="background-color: antiquewhite;">HTML5 標誌圖示</h2>
+				<img src="images/mip_Pssst_.svg" width="128" height="128" alt="HTML5 Logo" style="background-color: blueviolet;">
+				<img src="images/mip_Pssst_.svg" width="128px" height="128px" alt="HTML5 Logo" style="background-color: blueviolet;">
+				<img src="images/mip_Pssst_.svg" width="50%" height="120%" alt="HTML5 Logo" style="background-color: blueviolet;">
+			</div>
+		</div>
+	</body>
+</html>

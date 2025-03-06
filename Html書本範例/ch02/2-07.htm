@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>範例</title>
+</head>
+
+<body>
+    <!-- <dl>會自動留出間距(預設往外16px), <dt>不會留出間距稱為區域標籤, <dd>不會留出上下間距,但有40px的縮排,
+        另外<body>有預設8px的間(內)距,只有這個是往內看的
+    -->
+    <h2>使用特殊型的dl、dt、dd標籤</h2>
+    <dl>
+        <dt>靜夜思  李白</dt>
+        <dd>
+            床前明月光，疑是地上霜。<br> 
+            舉頭望明月，低頭思故鄉。<br>
+        </dd>
+        <dt>說明</dt>
+        <dd>月光舖在床前的地上，像是一層瑩白的濃霜。抬頭眺望窗外的明月，低頭思念久別的故鄉。</dd>
+    </dl>
+    測試文字
+    <div style="margin-top: 16px;">
+        <dt>靜夜思  李白</dt>
+        <dd>
+            床前明月光，疑是地上霜。<br> 
+            舉頭望明月，低頭思故鄉。<br>
+        </dd>
+        <dt>說明</dt>
+        <dd>月光舖在床前的地上，像是一層瑩白的濃霜。抬頭眺望窗外的明月，低頭思念久別的故鄉。</dd>
+        <hr>
+    </div>
+    <h2>使用一般型的div標籤</h2>
+    <!-- dt只是div的別名,沒有設定間距。dd也是div的別名,但有設定左側間距。
+    -->
+    <dl>
+        <div>靜夜思  李白</div>
+        <div style="margin-left: 40px;">
+            床前明月光，疑是地上霜。<br> 
+            舉頭望明月，低頭思故鄉。<br>
+        </div>
+        <dt>說明</dt>
+        <dd>月光舖在床前的地上，像是一層瑩白的濃霜。抬頭眺望窗外的明月，低頭思念久別的故鄉。</dd>
+        <hr>
+    </dl>
+</body>
+
+</html>

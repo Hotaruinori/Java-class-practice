@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>範例</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3>提示訊息</h3>
+		<button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right"
+			title="Message" data-bs-content="這是測試訊息!">彈跳提示訊息</button>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+			return new bootstrap.Popover(popoverTriggerEl)
+		})
+	</script>
+</body>
+
+</html>

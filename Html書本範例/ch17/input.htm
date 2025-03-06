@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" data-position="fixed">
+    <h1>Input</h1>
+  </div>
+  <div data-role="content">
+    <form method="get" action="">
+    <label for="inputText">文字:</label>
+    <input type="text" name="inputText" id="inputText"/>
+    <label for="inputPass">密碼:</label>
+    <input type="password" name="inputPass" id="inputPass"/>
+    <label for="inputNumber">數字:</label>
+    <input type="number" name="inputNumber" id="inputNumber"/>    
+    <label for="inputEmail">電子郵件:</label>
+    <input type="email" name="inputEmail" id="inputEmail"/>
+    <label for="inputUrl">網址:</label>
+    <input type="url" name="inputUrl" id="inputUrl"/>
+    <label for="inputTel">電話:</label>
+    <input type="tel" name="inputTel" id="inputTel"/>
+    <label for="inputSearch">搜尋:</label>
+    <input type="search" name="inputSearch" id="inputSearch"/>
+    <label for="inputTextarea">說明:</label>
+    <textarea name="inputTextarea" id="inputTextarea"></textarea>
+    <input type="submit" name="button1" id="button1" data-inline="true" value="送出">
+	<input type="reset" name="button2" id="button2" data-inline="true" value="重設">
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

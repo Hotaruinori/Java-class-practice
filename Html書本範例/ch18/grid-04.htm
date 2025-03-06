@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>範例</title>
+    <style>
+        div[class ~="col"] {
+            background-color: #E1E1E1;
+            border: 1px solid #CCCCCC;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .row {
+            background-color: #EEEEEE;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .bigger{
+            height: 60px !important;
+            line-height: 60px !important;
+        }
+
+        .smaller{
+            height: 40px !important;
+            line-height: 40px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col smaller">
+                靠上
+            </div>
+            <div class="col bigger">
+                靠上
+            </div>
+            <div class="col">
+                靠上
+            </div>                        
+        </div>
+        <div class="row align-items-center">
+            <div class="col smaller">
+                置中
+            </div>
+            <div class="col bigger">
+                置中
+            </div>
+            <div class="col">
+                置中
+            </div>   
+        </div>
+        <div class="row align-items-end">
+            <div class="col smaller">
+                靠下
+            </div>
+            <div class="col bigger">
+                靠下
+            </div>
+            <div class="col">
+                靠下
+            </div>   
+        </div>
+    </div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

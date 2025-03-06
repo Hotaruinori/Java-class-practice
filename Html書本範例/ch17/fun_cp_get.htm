@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script>
+$(document).one("pageinit", function(){
+	$("#getBtn").on("click", function(){	
+		$.mobile.changePage("fun_cp_get.php", {
+			type:"get",
+			data:{
+				send:'get',
+				sendval:1
+			},
+			transition:'slideup'
+		});
+	});
+	$("#postBtn").on("click", function(){	
+		$.mobile.changePage("fun_cp_get.php", {
+			type:"post",
+			data:{
+				send:'post',
+				sendval:2
+			},
+			transition:'slideup'
+		});
+	});	
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header">
+  	<h1>ChangePage Function</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="controlgroup" data-type="horizontal" style="text-align:center">
+      <button id="getBtn">Get傳送</button>
+      <button id="postBtn">Post傳送</button>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

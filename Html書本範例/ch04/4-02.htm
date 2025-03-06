@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+	<head><title>範例</title></head>
+	<body>
+		<!--在td或th元素中可以設定colspan屬性水平合併欄位，rowspan屬性垂直合併欄位
+		nowwrap可以讓儲存格裡的文字不換行，如<td nowrap>想要的文字<td>
+		-->
+		<table border="1" width="80%" cellspacing="5" cellpadding="5">
+			<tr>
+				<td colspan="2">A</td>				
+			</tr>
+			<tr>
+				<td>A1</td>
+				<td>A2</td>				
+			</tr>
+		</table>
+		<br>
+		<table border="1" width="80%" cellspacing="5" cellpadding="5">
+			<tr>
+				<td rowspan="2">A</td>
+				<td>A1</td>
+			</tr>
+			<tr>				
+				<td>A2</td>				
+			</tr>
+		</table>
+		<table  style="border:blue 5px solid; width:50% ;height: 50%; margin: 15px; border-spacing: 15px; padding: 30px;" >
+			<tr >
+				<th style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">表頭A</th>
+				<th style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">表頭B</th>
+				<th style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">表頭C</th>
+				<th style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">表頭D</th>
+				<th style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">表頭E</th>			
+			</tr>
+			<tr >
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;" colspan="2" rowspan=" 2">A1+B1+A2+A3</td>
+				
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">C1</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">D1</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">E1</td>
+			</tr>
+			<tr>
+			
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">C2</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">D2</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">E3</td>			
+			</tr>
+			<tr>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">A3</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">B3</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">C3</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">D3</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">E3</td>			
+			</tr>
+			<tr>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">A4</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">B4</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">C4</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">D4</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">E4</td>			
+			</tr>
+			<tr>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">A5</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">B5</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">C5</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">D5</td>
+				<td style="border:rgb(0, 255, 42) 5px solid ; padding: 10px;">E5</td>			
+			</tr>
+		</table>		
+	</body>
+</html>

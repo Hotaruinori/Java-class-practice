@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>範例</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3>提示訊息</h3>
+		<p>
+			<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+				title="下方顯示訊息">按鈕一</button>
+			<a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+				title="右方顯示訊息">按鈕二</a>
+		</p>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
+</body>
+
+</html>

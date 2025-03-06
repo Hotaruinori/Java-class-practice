@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile 網路應用程式</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button1").click(function(){
+		var msg = '文字欄位：'+$("#iText").val()+"\n";
+		msg += '文字區域欄位：\n'+$("#iTextarea").val()+"\n";
+		msg += '日期時間欄位：'+$("#iDatetime").val()+"\n";		
+		msg += '滑桿：'+$("#iRange").val();				
+		alert(msg);
+	});
+});
+</script>
+</head>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" data-position="fixed">
+    <h1>表單</h1>
+  </div>
+  <div data-role="content">
+    <form>
+    <label for="iText">文字欄位:</label>
+    <input type="text" name="iText" id="iText" />
+    <label for="iTextarea">文字區域欄位:</label>
+    <textarea name="iTextarea" id="iTextarea"></textarea>
+	<label for="iDatetime">日期時間欄位:</label>
+	<input type="datetime" name="iDatetime" id="iDatetime" />        
+    <label for="iRange">滑桿:</label>
+    <input type="range" name="iRange" id="iRange" value="50" min="0" max="100" data-highlight="true">
+    <a href="#" data-role="button" id="button1">顯示</a>
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>jQuery Mobile</h4>
+  </div>
+</div>
+</body>
+</html>

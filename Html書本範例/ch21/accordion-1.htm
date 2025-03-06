@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>範例</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3>手風琴折疊效果</h3>
+		<div class="accordion" id="accZone">
+			<div class="accordion-item">
+				<h4 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#area1">
+						第一區標題
+					</button>
+				</h4>
+				<div id="area1" class="accordion-collapse collapse show" data-bs-parent="#accZone">
+					<div class="accordion-body">
+						第一區的資料內容
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h4 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#area2">
+						第二區標題
+					</button>
+				</h4>
+				<div id="area2" class="accordion-collapse collapse" data-bs-parent="#accZone">
+					<div class="accordion-body">
+						第二區的資料內容
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
