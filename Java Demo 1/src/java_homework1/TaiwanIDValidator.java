@@ -2,11 +2,23 @@ package java_homework1;
 import java.util.regex.*;
 
 public class TaiwanIDValidator {
+   
+    
+    public static void main(String[] args) {
+        String id = "A1234567892"; // 測試用身分證字號
+
+        if (validateTaiwanID(id)) {
+            System.out.println("身分證字號合法！");
+        } else {
+            System.out.println("身分證字號不合法！");
+        }
+    }
     
     public static boolean validateTaiwanID(String id) {
         // 身分證字號的正規表達式
         String regex = "^[A-Z][12]\\d{8}$";
         if (!id.matches(regex)) {
+            System.out.println("身分證字號不符合格式！");
             return false; // 不符合格式
         }
 
@@ -38,13 +50,4 @@ public class TaiwanIDValidator {
         return sum % 10 == 0;
     }
 
-    public static void main(String[] args) {
-        String id = "A123456789"; // 測試用身分證字號
-
-        if (validateTaiwanID(id)) {
-            System.out.println("身分證字號合法！");
-        } else {
-            System.out.println("身分證字號不合法！");
-        }
-    }
 }
