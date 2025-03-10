@@ -3,15 +3,29 @@ import java.util.Scanner;
 public class TaiwanIDValidator {
     public static void main(String[] args) {
         //String id = "A123456789"; // 測試用身分證字號
-        System.out.println("請輸入身分證字號：");
+
         Scanner idinput = new Scanner(System.in);
-        String id = idinput.next();
-        idinput.close();
-        
+        boolean isValid = false;
+
+        do{
+            System.out.println("請輸入身分證字號：");
+            String id = idinput.next();
+            isValid = result(id);
+            
+        }while(!isValid);
+
+        idinput.close(); 
+    }
+
+
+    public static boolean result(String id){
         if (validateTaiwanID(id)) {
             System.out.println("身分證字號合法！");
-        } else {
+            return true;
+        } 
+        else {
             System.out.println("身分證字號不合法！");
+            return false;
         }
     }
     
@@ -40,7 +54,7 @@ public class TaiwanIDValidator {
 
         // 計算英文字首加權
         int sum = (firstLetterValue / 10) * 1 + (firstLetterValue % 10) * 9;
-        System.out.println("sum計算: " + sum);
+        System.out.println("英文字首計算: " + sum);
 
         // 計算後9個數字的權重
         //int sum2 = 0;
