@@ -1,3 +1,4 @@
+package Week01;
 public class ForExample {
     
     public static void main(String[] args) {
@@ -6,8 +7,8 @@ public class ForExample {
         }
         System.out.println("For loop is finished");
     }
-}
 
+    /*
     public static void main(String[] args){
         String[] gm = {"ps5", "xbox", "switch", "PC"};
         int x = gm.length;
@@ -18,4 +19,5 @@ public class ForExample {
         System.out.println(x);
 
 
-    }
+    } */
+}

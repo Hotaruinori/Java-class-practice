@@ -1,3 +1,4 @@
+package Week01;
 public class Nexample {
     public static void main(String[] args) {
         

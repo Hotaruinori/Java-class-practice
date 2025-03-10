@@ -1,3 +1,4 @@
+package Week01;
 public class ArrayExample {
     public static void main(String[] args) {
       /*  int[] array1 = {3,2,1};

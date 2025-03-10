@@ -1,3 +1,4 @@
+package Week01;
 import java.util.Arrays;
 
 public class ArrayExample2 {

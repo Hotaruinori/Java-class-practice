@@ -44,11 +44,12 @@ public class TWIDChecker {
         sum += (twId.charAt(9) - '0'); // 最後一位乘以1
 
         // 檢查是否能被10整除
+        System.out.println("sum校驗: " + sum);
         return sum % 10 == 0;
     }
 
     public static void main(String[] args) {
-        String twId = "A123456789"; // 示例身份證號碼
+        String twId = "R123950455"; // 示例身份證號碼
         if (isValidTWID(twId)) {
             System.out.println("身份證號碼有效");
         } else {

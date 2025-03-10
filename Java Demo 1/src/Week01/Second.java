@@ -1,3 +1,4 @@
+package Week01;
 class Second {
     public static void main(String[] args) {
         ForExample gamker = new ForExample();

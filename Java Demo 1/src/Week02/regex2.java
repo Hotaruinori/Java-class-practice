@@ -1,4 +1,4 @@
-package 第二週;
+package Week02;
 
 import java.util.regex.Pattern;
 
