@@ -2,23 +2,20 @@ package java_homework1;
 import java.util.Scanner;
 public class TaiwanIDValidator {
     public static void main(String[] args) {
-        //String id = "A123456789"; // 測試用身分證字號
-
         Scanner idinput = new Scanner(System.in);
-        boolean isValid = false;
-
+        boolean isValid;
+        // 如果輸入錯誤會再執行
         do{
             System.out.println("請輸入身分證字號：");
             String id = idinput.next();
             isValid = result(id);
-            
-        }while(!isValid);
-
+        }
+        while(!isValid);
         idinput.close(); 
     }
 
-
     public static boolean result(String id){
+        // 依照最後的計算結果作輸出
         if (validateTaiwanID(id)) {
             System.out.println("身分證字號合法！");
             return true;
@@ -33,7 +30,7 @@ public class TaiwanIDValidator {
         // 身分證字號的正規表達式
         String regex = "^[A-Z][12]\\d{8}$";
         if (!id.matches(regex)) {
-            System.out.println("身分證字號不符合格式！");
+            System.out.println("身分證字號不符合格式！(英文需大寫)");
             return false; // 不符合格式
         }
         // 計算校驗碼

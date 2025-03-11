@@ -6,6 +6,7 @@ public class ConstructorOverload {
 	public static void main(String[] args) {
 
 		ConstructorOverload construtor = new ConstructorOverload();
+		System.out.println(construtor);
 	}
 
 	public ConstructorOverload()
