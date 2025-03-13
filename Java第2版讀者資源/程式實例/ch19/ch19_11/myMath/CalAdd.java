@@ -1,1 +1,0 @@
-package myMath;						// 撱箇

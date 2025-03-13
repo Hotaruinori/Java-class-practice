@@ -1,1 +1,0 @@
-import myMath.*;							// 靘
