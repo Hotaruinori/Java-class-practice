@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+		<title>範例</title>
+	</head>
+	<body>
+		<div>
+			<form action="4-05getdata.php" method="get">
+				<p><label for="username">帳號：</label><input type="text" name="username" id="username"></p>
+				<p><label for="passwd">密碼：</label><input type="password" name="passwd" id="passwd"></p>
+				<p>
+					<input type="radio" name="gender" value="female" id="female" checked><label for="female">女</label>
+					<input type="radio" name="gender" value="male" id="male"><label for="male">男</label>
+				</p>
+			
+			<p>
+				興趣：
+				<label for="Jog">  </label><input type="checkbox" name="interest[]" value="Jog"   id="Jog">慢跑
+				<label for="Swin"> </label><input type="checkbox" name="interest[]" value="Swin"  id="Swin">游泳
+				<label for="Balls"></label><input type="checkbox" name="interest[]" value="Balls" id="Balls">球類
+				<label for="Other"></label><input type="checkbox" name="interest[]" value="Other" id="Other">其他
+			</p>
+			<p><input type="submit" value="確定"> <input type="reset" value="重置"></p>
+			</form>
+		</div>
+	</body>
+</html>

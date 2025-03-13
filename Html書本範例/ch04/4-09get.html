@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+	<title>範例</title>
+	<body>
+		<div>
+		<form>
+			<fieldset style="color: rgb(255, 0, 13); border: 3px solid blue">
+				<!--可以把legend裡的資訊嵌合在框線中-->
+				<legend>登入資訊</legend>
+				<p><label for="username">帳號：</label><input type="text" name="username" id="username" autofocus required></p>
+				<p><label for="passwd">密碼：</label><input type="password" name="passwd" id="passwd" required></p>
+			</fieldset>		
+			<fieldset style="color: rgb(255, 0, 13); border: 3px solid blue">
+				<legend>詳細資料</legend>
+				<p><label for="username">住址：</label><input type="search" name="username" id="username"></p>
+				<p><label for="passwd">電話：</label><input type="tel" name="tel" id="tel" placeholder="+886"></p>
+				<p><label for="passwd">信箱：</label><input type="email" name="email" id="email"></p>
+				<p><label for="passwd">網址：</label><input type="url" name="url" id="url"></p>
+				<p><label for="passwd">編號：</label><input type="number" name="tel" id="tel" min="0" max="10" step="2"></p>
+				<p><label for="passwd">日期：</label><input type="date" name="tel" id="tel"></p>
+				<p><label for="passwd">時間：</label><input type="time" name="tel" id="tel"></p>
+				<p><label for="passwd">顏色：</label><input type="color" name="tel" id="tel"></p>
+				<p><input type="submit" value="登入"> <input type="reset" value="重置"></p>
+			</fieldset>		
+		</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>範例</title>
+	
+	</head>
+	<body>
+		<div>
+			<form action = "4-04.getdata.php" method="get">
+				性別：
+				<!--用相同欄位名稱就會是一組的，業界應該會男 = 1，女 = 2，這樣可以避免字串的問題與節省資料庫空間，但這裡只是教學所以就不改了-->
+				<input type="radio" name="gender" value="female" checked>女
+				<input type="radio" name="gender" value="male">男
+				<br>
+				興趣：
+				<input type="checkbox" name="interest[]" value="Jog">慢跑
+				<input type="checkbox" name="interest[]" value="Swin">游泳
+				<input type="checkbox" name="interest[]" value="Balls">球類
+				<input type="checkbox" name="interest[]" value="Other">其他
+
+				<p><input type="submit" value="確定"> 
+					<input type="reset" value="重置"></p>
+			</form>
+		</div>
+	</body>
+</html>
