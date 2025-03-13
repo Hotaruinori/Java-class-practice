@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.zip.*;
+public class ch23_1 {
+    public static void main(String[] args) throws IOException {
+// 建立欲壓縮的檔案File的物件src
+		File fileToZip = new File("ch23_1.txt");				
+		FileInputStream src = new FileInputStream(fileToZip);	
+// 建立壓縮目的位置物件
+        FileOutputStream zipToSave = new FileOutputStream("ch23_1.zip");
+        ZipOutputStream dst = new ZipOutputStream(zipToSave);
+// 在壓縮資料夾內建立壓縮檔案項目               
+        ZipEntry zipEntry = new ZipEntry(fileToZip.getName());
+        dst.putNextEntry(zipEntry);		
+// byte方式讀出未壓縮檔案src物件, 然後寫入壓縮檔案dst物件		
+        byte[] bytes = new byte[1024];				// 每次讀取的byte陣列
+        int length;									// 紀錄讀取byte數
+        while((length = src.read(bytes)) >= 0) {
+            dst.write(bytes, 0, length);
+        }
+        dst.close();		// 關閉輸出串流
+        src.close();		// 關閉輸入串流
+    }
+}
