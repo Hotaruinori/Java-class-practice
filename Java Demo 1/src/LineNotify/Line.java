@@ -10,17 +10,17 @@ public class Line {
 
 	public static void main(String[] args) {
 
-		System.out.println("²q¼Æ¦r¹CÀ¸, ±z·Ç³Æ¦n¤F¶Ü?");
-		System.out.println("½Ð¿é¤J©m¦W©Î®y¸¹:");
+		System.out.println("ï¿½qï¿½Æ¦rï¿½Cï¿½ï¿½, ï¿½zï¿½Ç³Æ¦nï¿½Fï¿½ï¿½?");
+		System.out.println("ï¿½Ð¿ï¿½Jï¿½mï¿½Wï¿½Î®yï¿½ï¿½:");
 		Scanner sc = new Scanner(System.in);
 		String yourName = sc.next();
 		boolean flag = true;
 		int tryCount = 1;
 
-		System.out.println("­Y­nÂ÷¶}, ½Ð¿é¤J exit");
+		System.out.println("ï¿½Yï¿½nï¿½ï¿½ï¿½}, ï¿½Ð¿ï¿½J exit");
 
 		do {
-			System.out.printf("½Ð¿é¤J1-100ªº¼Æ¦r(%d):\n", tryCount);
+			System.out.printf("ï¿½Ð¿ï¿½J1-100ï¿½ï¿½ï¿½Æ¦r(%d):\n", tryCount);
 			String input = sc.next();
 
 			if (input.equals("exit")) {
@@ -28,7 +28,7 @@ public class Line {
 			}
 
 			if (input.equals("63")) {
-				sendLineNOtify(yourName + " ®¥³ß±z²q¤¤¤F, ±z²q¤F " + tryCount + "¦¸");
+				sendLineNOtify(yourName + " ï¿½ï¿½ï¿½ß±zï¿½qï¿½ï¿½ï¿½F, ï¿½zï¿½qï¿½F " + tryCount + "ï¿½ï¿½");
 				flag = false;
 			}
 
@@ -36,7 +36,7 @@ public class Line {
 
 		} while (flag);
 
-		System.out.println("®¥³ß±z, ²q¤¤¤F");
+		System.out.println("ï¿½ï¿½ï¿½ß±z, ï¿½qï¿½ï¿½ï¿½F");
 		sc.close();
 
 	}
@@ -60,7 +60,7 @@ public class Line {
 			// System.out.println("Response code: " + response.statusCode());
 			// System.out.println("Response body: " + response.body());
 		} catch (Exception e) {
-			// TODO: handle exception
+			// handle exception
 		}
 
 		return response;

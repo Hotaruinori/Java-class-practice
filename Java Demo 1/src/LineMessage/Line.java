@@ -1,26 +1,26 @@
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
-import java.net.http.HttpRequest.BodyPublishers;
+//import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
+//import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Scanner;
 
 public class Line {
 
     public static void main(String[] args) {
 
-        System.out.println("²q¼Æ¦r¹CÀ¸, ±z·Ç³Æ¦n¤F¶Ü?");
-        System.out.println("½Ð¿é¤J©m¦W©Î®y¸¹:");
+        System.out.println("ï¿½qï¿½Æ¦rï¿½Cï¿½ï¿½, ï¿½zï¿½Ç³Æ¦nï¿½Fï¿½ï¿½?");
+        System.out.println("ï¿½Ð¿ï¿½Jï¿½mï¿½Wï¿½Î®yï¿½ï¿½:");
         Scanner sc = new Scanner(System.in);
         String yourName = sc.next();
         boolean flag = true;
         int tryCount = 1;
 
-        System.out.println("­Y­nÂ÷¶}, ½Ð¿é¤J exit");
+        System.out.println("ï¿½Yï¿½nï¿½ï¿½ï¿½}, ï¿½Ð¿ï¿½J exit");
 
         do {
-            System.out.printf("½Ð¿é¤J1-100ªº¼Æ¦r(%d):\n", tryCount);
+            System.out.printf("ï¿½Ð¿ï¿½J1-100ï¿½ï¿½ï¿½Æ¦r(%d):\n", tryCount);
             String input = sc.next();
 
             if (input.equals("exit")) {
@@ -28,7 +28,7 @@ public class Line {
             }
 
             if (input.equals("63")) {
-                sendLineNotify(yourName + " ®¥³ß±z²q¤¤¤F, ±z²q¤F " + tryCount + "¦¸");
+                sendLineNotify(yourName + " ï¿½ï¿½ï¿½ß±zï¿½qï¿½ï¿½ï¿½F, ï¿½zï¿½qï¿½F " + tryCount + "ï¿½ï¿½");
                 flag = false;
             }
 
@@ -36,19 +36,19 @@ public class Line {
 
         } while (flag);
 
-        System.out.println("®¥³ß±z, ²q¤¤¤F");
+        System.out.println("ï¿½ï¿½ï¿½ß±z, ï¿½qï¿½ï¿½ï¿½F");
         sc.close();
 
     }
 
     public static HttpResponse<String> sendLineNotify(String mag) {
 
-        //±zªº LINE Channel access token
+        //ï¿½zï¿½ï¿½ LINE Channel access token
         String accessToken = "JM1Q3IeeiegAAQblr+DTmQnKHC95Njg0tJXLZQJeDiscC6RsMuHkZo1zbt6qb/GT+eEkIfWRcegUxrDCW0/esldZ3YLO+6PKixJPL+vWp4lIlgZsSMN/jHZRBbCGdLrjgpFvtGJvnQwS0UOXhK8x8gdB04t89/1O/w1cDnyilFU=";
-        String groupID = "C78c6ebf5ea96ebb7f9ed67941b4794e3";  // ±zªº LINE ¸s²Õ ID
+        String groupID = "C78c6ebf5ea96ebb7f9ed67941b4794e3";  // ï¿½zï¿½ï¿½ LINE ï¿½sï¿½ï¿½ ID
         String message = mag;
 
-        // ³]©w JSON ¿é¥X®æ¦¡
+        // ï¿½]ï¿½w JSON ï¿½ï¿½Xï¿½æ¦¡
 
         String jsonBody = "{\n" +
 
@@ -70,47 +70,47 @@ public class Line {
         HttpResponse<String> response = null;
 
         try {
-              // ³]©w POST ½Ð¨D
+              // ï¿½]ï¿½w POST ï¿½Ð¨D
 
               HttpRequest request = HttpRequest.newBuilder()
 
               .uri(new URI("https://api.line.me/v2/bot/message/push"))
 
-              .header("Authorization", "Bearer " + accessToken)              // ¥[¤J Authorization ÀY³¡
+              .header("Authorization", "Bearer " + accessToken)              // ï¿½[ï¿½J Authorization ï¿½Yï¿½ï¿½
 
-              .header("Content-Type", "application/json")  // ³]©w Content-Type ¬° application/json
+              .header("Content-Type", "application/json")  // ï¿½]ï¿½w Content-Type ï¿½ï¿½ application/json
 
-              .POST(HttpRequest.BodyPublishers.ofString(jsonBody))  // ¶Ç»¼ JSON ¦r²Å¦ê
+              .POST(HttpRequest.BodyPublishers.ofString(jsonBody))  // ï¿½Ç»ï¿½ JSON ï¿½rï¿½Å¦ï¿½
 
               .build();
 
         
 
-              // µo°e½Ð¨D¨Ã³B²z¦^À³
+              // ï¿½oï¿½eï¿½Ð¨Dï¿½Ã³Bï¿½zï¿½^ï¿½ï¿½
 
              HttpClient client = HttpClient.newHttpClient();
              response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
     
-        // Åã¥Ü¦^À³¤º®e
+        // ï¿½ï¿½Ü¦^ï¿½ï¿½ï¿½ï¿½ï¿½e
     
         if (response.statusCode() == 200)
              {
      
-            System.out.println("°T®§µo°e¦¨¥\¡I");
+            System.out.println("ï¿½Tï¿½ï¿½ï¿½oï¿½eï¿½ï¿½ï¿½\\ï¿½I");
     
         }
              else
              {
 
-                  System.out.println("µo°e¥¢±Ñ¡Aª¬ºA½X¡G" + response.statusCode());
+                  System.out.println("ï¿½oï¿½eï¿½ï¿½ï¿½Ñ¡Aï¿½ï¿½ï¿½Aï¿½Xï¿½G" + response.statusCode());
 
-                  System.out.println("¿ù»~¤º®e¡G" + response.body());
+                  System.out.println("ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½eï¿½G" + response.body());
    
         }
 
         } catch (Exception e) {
-            e.printStackTrace();  // ¦pªG¦³¿ù»~¡A¥´¦L¿ù»~°T®§
+            e.printStackTrace();  // ï¿½pï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½Aï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½~ï¿½Tï¿½ï¿½
         }
 
         return response;
