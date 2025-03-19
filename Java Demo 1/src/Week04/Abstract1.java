@@ -12,7 +12,7 @@ public class Abstract1 {
 		System.out.println("Rectangle:" + area);
 	}
 }
-
+// test
 abstract class Shape {
 	// 計算面積
 	public abstract int computeArea();
