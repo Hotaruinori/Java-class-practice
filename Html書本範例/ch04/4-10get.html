@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<title>表單的其他元件</title>
+</head>
+<body>
+	<div>
+	<form action="4-10getdata.php" method="get">
+		<p>姓名：<input type="text" name="username" placeholder="請輸入姓名" required autofocus autocomplete="on"></p>
+		<p>搜尋：<input type="search" name="search"></p>
+		<p>信箱1：<input type="email" name="email"></p>
+		<p>信箱2：<input type="text" name="email2" pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,4}$">
+		<p>信箱3：<input type="email" name="email2" pattern="[a-zA-Z0-9._%\+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" 
+			title="輸入格式：xyz@abc.com" >
+		<p>網址：<input type="text" pattern="^(https?:\/\/)?([\w\.\-]+)\.([a-z\.]{2,6})"></p>
+		<p>電話：<input type="text" name="tel"  pattern="\+?[0-9]{5,12}"></p>
+		<p>數字：<input type="number" name="number" min="1" max="21" step="3"></p>
+		<p>日期：<input type="date" name="date"></p>
+		<p>時間：<input type="time" name="time"></p>
+		<p>程度：<input type="range" name="range" step="0.01" max="1" min="0"></p>
+		<p>顏色：<input type="color" name="color"></p>
+		<p>輸入：<input type="text" pattern="[a-zA-Z0-9]+"></p>
+		<p>輸入：<input type="text" pattern="^\w{3}.*"></p>
+		<p>輸入：<input type="text" pattern="\w.*"></p>
+		
+
+	<p><input type="submit" value="送出">
+	<input type="reset" value="重置"></p>
+	</form>
+	</div>
+</body>
+</html>	
+<!--
+書上沒有檔案上傳
+
+-->
