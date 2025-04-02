@@ -4,62 +4,59 @@
 	<meta charset="UTF-8">
 	<title>範例</title>
 	<style>
+		table{
+			border-spacing: 1cap; /*這才是設定儲存格間距*/
+		}
 		td{
 			padding: 20px;
-			margin: 10px;
+			margin: 10px; /*在這邊沒作用，因為目標是單個格子*/
 			text-align: center;
+			background-color: antiquewhite;
 		} 
-			
-
-
-
-
-
-
-
-
-
-
-		
+		/*更精確的選的優先權比不精確高，但如果同位階，後下者覆蓋前面*/
 		h2[class="brand"]{
-			color: #0c1b16;
+			color: #ca4963;
+		}  
+		.brand{
+			color: #27db20;
+		} 
+		h2.brand{
+			color: #5220db;
+		} 
+		/*選定img標籤帶alt屬性*/
+		img[alt]{
+			border:solid 5px rgb(0, 26, 255);
 		}
+		/*選定a標籤帶href屬性，比對值完全符合*/
+		a[href = "https://zh.wikipedia.org/zh-tw/HTML5"]{
+			color: #b40531;
+		}
+		/*選定img標籤帶alt屬性，比對帶"Logo"單字*/
 		img[alt~="Logo"]{
 			width: 80px; height: 80px;
-		}		
-		a[href^="http://"]{
-			color: #00ffaa;
-			text-decoration: none;
+		}	
+		/*選定img標籤帶alt屬性，比對帶"設計"單字*/
+		img[alt~="設計"]{
+			width: 120px; height: 120px;
+		}	
+		/*選定img標籤帶alt屬性，比對開頭帶"photo"單字*/
+		img[alt|=photo]{
+			border:solid 5px rgb(255, 0, 34);
+			background-color: aqua;
 		}
+		/*選定a標籤帶href屬性，比對開頭帶"https:*/
+		a[href^="https://"]{
+			/* color: #00ffaa; */
+			text-decoration: none; /*去除超連結底線*/
+		}
+		/*選定img標籤帶src屬性，比對結尾帶".png*/
 		img[src$=".png"]{
 			border: 1px solid #00000081;
-		}		
+		}	
+		/*選定a標籤帶href屬性，比對內容包含"e-happy"*/	
 		a[href*="e-happy"]{
 			background-color: rgb(119, 255, 0);
 		}
-	
-			
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
 	</style>
 </head>
 <body>
@@ -77,7 +74,50 @@
 			</td>
 			<td>
 				<h2>聯絡我們</h2>
+				<h5 class="brand"> testtest</h5>
 				<img src="images/logo.jpg" alt="eHappy Logo">
+				<p><a href="mailto:e-happy@e-happy.com.tw">文淵閣工作室信箱</a></p>
+			</td>	
+			
+		</tr>	
+		
+	</table>
+	<table>
+		<tr>
+			<td>
+				<h2 class="brand">HTML5</h2>
+				<img src="images/HTML5.png" alt="網頁 設計">
+				<p><a href="https://zh.wikipedia.org/zh-tw/HTML5">認識HTML5</a></p>
+			</td>
+			<td>
+				<h2 class="brand">CSS3</h2>
+				<img src="images/CSS3.png" alt="樣式 設計">
+				<p><a href="https://zh.wikipedia.org/zh-tw/CSS3">認識CSS3</a></p>
+			</td>
+			<td>
+				<h2>聯絡我們</h2>
+				<img src="images/logo.jpg" alt="網站 設計">
+				<p><a href="mailto:e-happy@e-happy.com.tw">文淵閣工作室信箱</a></p>
+			</td>	
+			
+		</tr>	
+		
+	</table>
+	<table>
+		<tr>
+			<td>
+				<h2 class="brand">HTML5</h2>
+				<img src="images/HTML5.png" alt="photo-1">
+				<p><a href="https://zh.wikipedia.org/zh-tw/HTML5">認識HTML5</a></p>
+			</td>
+			<td>
+				<h2 class="brand">CSS3</h2>
+				<img src="images/CSS3.png" alt="photo-2">
+				<p><a href="https://zh.wikipedia.org/zh-tw/CSS3">認識CSS3</a></p>
+			</td>
+			<td>
+				<h2>聯絡我們</h2>
+				<img src="images/logo.jpg" alt="photo-3">
 				<p><a href="mailto:e-happy@e-happy.com.tw">文淵閣工作室信箱</a></p>
 			</td>	
 			

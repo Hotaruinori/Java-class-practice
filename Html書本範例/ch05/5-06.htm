@@ -8,12 +8,23 @@
 	
 			color: white;
 			background-color: black;
-			margin-left: -1em;
+			
+		}
+		p::first-letter{
+			color: rgb(226, 43, 43);
+			background-color: rgb(129, 221, 25);
+			font-size: 200%;
 		}
 		ul::after{
-			content: " ";
-			display: block;
+			content: "123123123123 "; /*以content內的字憑空產生內容*/
+			display: block; /*原始值為inline*/
 			border-bottom: 1px solid black;
+			margin-left: -1em;
+		}
+		ul::before{
+			content: "================== ";
+			background-color: brown;
+			margin-left: -1em;
 		}		
 	</style>
 </head>

@@ -6,13 +6,15 @@
 <style>
 	a {
 	  text-decoration: none;
-	  font-size: 13pt;
+	  font-size: 13pt; /*座標點非px*/
+	  /*此處若設定前景色，不管超連結有無點閱都統一為此顏色，除非配合以下虛擬狀態選擇器*/
+	  color: rgb(49, 226, 43);   
 	}
 	a:link {
-	  color: blue;  
+	  color: rgb(6, 116, 52);   /*尚未點閱但有超連結的狀態*/
 	}
 	a:visited {
-	  color: Crimson;
+	  color: rgb(220, 167, 20); /*點閱過*/
 	}
 	a:hover {
 	  border: 1px solid black;
@@ -20,15 +22,59 @@
 	a:active {
 	  color: yellow;
 	}
+	a:focus{
+	  border: solid 2px red;	
+	  background-color: aqua;
+	}
+	input:focus{
+		background-color: bisque;
+	}
+	input:hover{
+		background-color: rgb(206, 255, 196);
+	}
+	input:checked{
+		height: 50px;width: 50px; /*顏色和字體大小無效，可以使用span標籤另外上樣式*/
+	}
+	li:empty{
+		background-color: rgb(133, 201, 206);
+	}
+	li:not(.poem){
+		color: red;
+	}
 </style>
 </head>
 <body>
-	<h2>網路食譜網站</h2>
-	<ul>
-	  <li><a href="http://icook.tw/">iCook愛料理</a></li>
-	  <li><a href="http://food.tank.tw/">食譜大全</a></li>
-	  <li><a href="http://cookpad.com/tw">Cookpad台灣</a></li>
-	  <li><a href="http://recipe.piliapp.com">食譜幫</a></li>
-	</ul>
+	<div>
+		<h2>網路食譜網站</h2>
+		<ul>
+		<li> aaaaaaa <a href="http://icook.tw/">iCook愛料理</a></li>
+		<li class="poem"><a href="http://food.tank.tw/">食譜大全</a></li>
+		<li><a href="http://cookpad.com/tw">Cookpad台灣</a></li>
+		<li><a href="http://recipe.piliapp.com">食譜幫</a></li>
+		<li></li>
+		</ul>
+		<input type="text">
+		<button disabled>這個按鈕被禁用了</button>
+		<input type="button" value="正常按鈕">
+		<button>正常按鈕2</button>
+	</div>
+	<div>
+		<form action = "4-04.getdata.php" method="get">
+			性別：
+			<!--用相同欄位名稱就會是一組的，業界應該會男 = 1，女 = 2，這樣可以避免字串的問題與節省資料庫空間，但這裡只是教學所以就不改了-->
+			<input type="radio" name="gender" value="female" checked>
+				<span style = "color: rgb(165, 42, 93); font-size: 60px;" ></style>女</span>
+			<input type="radio" name="gender" value="male">男
+			<br>
+			興趣：
+			<input type="checkbox" name="interest[]" value="Jog">慢跑
+			<input type="checkbox" name="interest[]" value="Swin">游泳
+			<input type="checkbox" name="interest[]" value="Balls">球類
+			<input type="checkbox" name="interest[]" value="Other">其他	
+
+			<p><input type="submit" value="確定"> 
+				<input type="reset" value="重置"></p>
+		</form>
+	</div>
 </body>
 </html>

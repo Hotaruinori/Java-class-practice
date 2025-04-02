@@ -6,7 +6,7 @@
 }
 h1 {   /*可以影響body裡的樣式*/
     color: rgb(55, 0, 255);
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 202);
 }
 p {
     background-color: bisque; margin: 4px;  border: solid black 1px;

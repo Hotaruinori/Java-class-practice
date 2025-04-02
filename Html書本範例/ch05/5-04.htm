@@ -7,24 +7,45 @@
 		table{
 		  width:300px;
 		  border:2px solid black;
+		  margin:10px;
+		}
+		tr{
+			color: rgb(111, 0, 255);
+			background-color: rgb(195, 230, 72);
 		}
 		th, td {
 		  text-align: center;
-		  margin:10px; padding:2px;
-		  border:1px solid gray;
+		  margin:10px;/*這邊無效*/ 
+		  padding:2px;
+		  border:3px solid gray;
 		}
+		/*選定td為tr中的第一個子元素*/
 		td:nth-child(1){
 		  text-align:left;
 		}
+		/*選定td為tr中的第二個子元素*/
 		td:nth-child(2){
 		  text-align:right;
 		}
+		/*選定tr中的奇數*/
 		tr:nth-child(2n+1){
 		  background-color: #f1f1f1;
 		}
+		/*選定td為tr中的倒數第三個子元素*/
+		tr:nth-last-child(3){
+			color: #b81919;
+		}
 		tr:first-child{
 		  color: #FFFFFF;
-		  background-color: #00CED1;
+		  background-color: #00CED1; /*後者覆蓋前者*/
+		}
+		tr:last-child{
+			color: #3f0bcf;font-size: 20px;
+		}
+		/*選定td為tr中的唯一子元素*/
+		td:only-child{
+			background-color: #0bcf63;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -58,6 +79,10 @@
 	  <tr>
 	    <td>泡打粉</td>
 	    <td>2g</td>
+	  </tr>
+	  <tr>
+		<td colspan="2">以上結束</td>
+	
 	  </tr>
 	</table>
 </body>

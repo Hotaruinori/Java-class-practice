@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的優先權測試</title>
+    <style>
+        body{
+            background-color: rgb(242, 247, 218);
+            background-color: rgb(226, 226, 245);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>標題一：H1</h1>
+        <h2>標題二：H2</h1>
+        <p>段落一</p>
+        <p>段落二(行內樣式)</p>
+        <p class="class1">段落三(class1)</p>
+        <p class="class1">段落四(class1)</p>
+        <p id="id1">段落五(id1)</p>
+        <p id="id2">段落六(id2)</p>
+        <p id="id3" class="class2">段落七(id3)</p>
+        <p id="id4" class="class2">段落八(id4)</p>
+    </div>
+</body>
+</html>
