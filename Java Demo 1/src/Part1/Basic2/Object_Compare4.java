@@ -1,7 +1,7 @@
 package Part1.Basic2;
 class A {}
 
-class B extends A {}  //B 嚙羯嚙踝蕭 A
+class B extends A {}  //B 繼承 A
 
 public class Object_Compare4
 {
