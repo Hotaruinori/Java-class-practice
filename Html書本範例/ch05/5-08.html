@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS的優先權測試</title>
+    <!-- 這段是CSS的優先權測試 -->
+    <link rel="stylesheet" href="css/mystyle2.css"> 
     <style>
         body{
             background-color: rgb(242, 247, 218);
@@ -11,6 +13,8 @@
         }
 
     </style>
+    <!-- 若外部樣式檔的匯入是在內部樣式表之後，使用link來匯入，則會優先使用link的樣式表(除非有important)-->
+     <!-- <link rel="stylesheet" href="css/mystyle2.css">  -->
 </head>
 
 <body>

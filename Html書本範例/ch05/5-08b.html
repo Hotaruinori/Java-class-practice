@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的優先權測試</title>
+    <style>
+        
+        body{
+            background-color: rgb(242, 247, 218);
+            background-color: rgb(226, 226, 245);
+        }
+        /* 在這邊的import會失效，因為這邊的import是css的import，css的import是不具備優先權的 */
+        @import url("css/mystyle2.css");
+        * {
+            margin: 0;
+            color: blue;
+        }
+        h1{ 
+            background-color: aqua;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            background-color: rgb(0, 255, 170);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            background-color: bisque;
+            margin: 5px;
+        }
+        /* 會聽更精確的 */
+        p.class1{
+            color: #db4c0a;
+        }  
+        .class1{
+            color: #000;
+        }
+        #id1{
+            color: #e206d7 !important;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #id2{
+            text-decoration: underline;
+        }
+        #id3{
+            border: 5px solid #000;
+        }
+        #id4{
+            border: 3px solid blue;
+            background-color: rgb(129, 133, 133);
+        }
+        /* 虛擬類別選擇器的優先權與元素選擇器一樣 */
+        p:nth-child(8){
+           text-decoration: line-through ; 
+           background-color: #9cdb0a;
+        }
+        p:hover{
+            background-color: #db4c0a;
+        }
+        p[title]{
+            text-decoration: overline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1 class="class1">標題一：H1(class1)</h1>
+        <h2>標題二：H2</h1>
+        <p>段落一</p>
+        <p>段落二(行內樣式)</p>
+        <p class="class1">段落三(class1)</p>
+        <p class="class1">段落四(class1)</p>
+         <!-- 行內樣式優先權更高，除非加上!important -->
+        <p id="id1" style="color: #9cdb0a; background-color: aliceblue;">段落五(id1)</p> 
+        <p id="id2">段落六(id2)</p>
+        <p id="id3" class="class2">段落七(id3 & class2)</p>
+        <p id="id4" class="class2">段落八(id4 & class2)</p>
+    </div>
+</body>
+</html>
