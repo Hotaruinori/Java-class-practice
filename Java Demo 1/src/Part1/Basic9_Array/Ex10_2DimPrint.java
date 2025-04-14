@@ -1,4 +1,4 @@
-
+package Part1.Basic9_Array;
 public class Ex10_2DimPrint
 {
 	public static void main(String[] args)
@@ -6,7 +6,7 @@ public class Ex10_2DimPrint
 		int[][] ary = {{2,4,6,8},{1,3,5,7},{10,11,12,13}};
         //int[] ary[] = {{2,4,6,8},{1,3,5,7},{10,11,12,13}};
         				
-        System.out.println("¿é¥X©Ò¦³¤¸¯À:");
+        System.out.println("è¼¸å‡ºæ‰€æœ‰å…ƒç´ :");
         
         int x,y;
         

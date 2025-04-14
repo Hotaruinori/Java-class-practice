@@ -1,4 +1,6 @@
+package Part1.Basic9_Array;
 
+// 陣列的元素可以是不同類型(不對稱)
 public class Ex09_AsymmetricArray
 {
 	public static void main(String[] args)
@@ -8,7 +10,7 @@ public class Ex09_AsymmetricArray
 		ary[1] = new int[2];
 		ary[2] = new int[5];
 				
-        System.out.println("�HEnhance for��X�}�C�Ҧ�����:");
+        System.out.println("以Enhance for輸出陣列所有元素:");
         for(int[] row : ary)
         {
             for(int element : row)

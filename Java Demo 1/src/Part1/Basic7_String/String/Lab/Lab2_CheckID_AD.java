@@ -1,4 +1,4 @@
-//Lab2: 嚙踝蕭嚙踝蕭嚙課字嚙踝蕭嚙誼查
+//Lab2: 身分證字號檢查
 package Part1.Basic7_String.String.Lab;
 import java.io.*;
 
@@ -45,7 +45,8 @@ public class Lab2_CheckID_AD
          
 
       
-      total = //嚙踝蕭嚙緝嚙緝嚙踝蕭嚙踝蕭嚙稼嚙緞嚙踝蕭
+    //   total = 
+      //嚙踝蕭嚙緝嚙緝嚙踝蕭嚙踝蕭嚙稼嚙緞嚙踝蕭
 	  
       //total=total+嚙踝蕭L嚙緝嚙踝蕭嚙踝蕭嚙稼嚙緞嚙踝蕭
       

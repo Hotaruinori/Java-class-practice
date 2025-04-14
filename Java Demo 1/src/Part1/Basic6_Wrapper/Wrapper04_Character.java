@@ -14,14 +14,14 @@ public class Wrapper04_Character
       
         System.out.println(ch1);
         System.out.println(ch2);
-        System.out.println();
+        System.out.println("================");
        
         System.out.println(Character.getNumericValue('0')*3);
         System.out.println(Character.getNumericValue('2')*3);
         System.out.println(Character.getNumericValue('4')*3);
         System.out.println(Character.getNumericValue('6')*3);
         System.out.println(Character.getNumericValue('8')*3);
-        System.out.println();
+        System.out.println("================");
         System.out.println(Character.getNumericValue('A')*3);
         System.out.println(Character.getNumericValue('E')*3);
         System.out.println(Character.getNumericValue('Z')*3);

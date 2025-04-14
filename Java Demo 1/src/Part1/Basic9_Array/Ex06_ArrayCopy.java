@@ -1,4 +1,4 @@
-
+package Part1.Basic9_Array;
 import java.util.*;
 
 public class Ex06_ArrayCopy
@@ -8,7 +8,7 @@ public class Ex06_ArrayCopy
 		
 	   int[] ary = {2, 4, 6, 8, 10, 12, 14, 16};
 	   	
-	   System.out.println("­ì¥»ªº°}¦C¡G");
+	   System.out.println("åŸæœ¬çš„é™£åˆ—ï¼š");
 	   for(int value : ary)
 	   {
 		  System.out.print(value + "  ");
@@ -16,26 +16,26 @@ public class Ex06_ArrayCopy
 		  
        System.out.println("\n");
           
-       int[] temp;                                        //«Å§i·s°}¦Ctemp
+       int[] temp;                                        //å®£å‘Šæ–°é™£åˆ—temp
        
- 	   temp = ary;                                        //temp«ü¦Vary°O¾ĞÅé
-	   ary = new int[ary.length + 2];                     //­«·s°t¸mary
+ 	   temp = ary;                                        //tempæŒ‡å‘aryè¨˜æ†¶é«”
+	   ary = new int[ary.length + 2];                     //é‡æ–°é…ç½®ary
 	   
-	   System.arraycopy(temp, 0, ary, 0, temp.length);    //½Æ»s°}¦C
+	   System.arraycopy(temp, 0, ary, 0, temp.length);    //è¤‡è£½é™£åˆ—
 	   
 	   ary[8] = 180;
-	   ary[9] = 200;	                                  //·s¼W¤¸¯À¸ê®Æ
+	   ary[9] = 200;	                                  //æ–°å¢å…ƒç´ è³‡æ–™
        temp=null;
        
-	   System.out.println("ªş¥[«áªº·s°}¦C¡G");
+	   System.out.println("é™„åŠ å¾Œçš„æ–°é™£åˆ—ï¼š");
 	   for(int value : ary)
 	   {
 		  System.out.print(value + "  ");
 	   }	  
 		  
 	   System.out.println("\n");
-/*	   
-       ArrayList ary2=new ArrayList(8);
+	   
+       ArrayList<Integer> ary2=new ArrayList<>(8);
        
        ary2.add(new Integer(2));
        ary2.add(4);
@@ -52,6 +52,6 @@ public class Ex06_ArrayCopy
        for(Object o : ary2) System.out.print(o + "  ");
        
        System.out.println();
-*/       
+   
     }
 }

@@ -13,7 +13,7 @@ public class Ex05_StringBuffer_String
         System.out.println("String嚙緝嚙踝蕭 str3   :  " + str3);
         System.out.println();
         
-        System.out.println( "str1.equals(str2) :" + str1.equals(str2));
+        // System.out.println( "str1.equals(str2) :" + str1.equals(str2));
 
         System.out.println( "str1.toString().equals(str2) :" + str1.toString().equals(str2));
 

@@ -6,7 +6,7 @@ public class Ex02_StringBufferAppend
         StringBuilder str = new StringBuilder("Java嚙緹嚙踝蕭嚙緙嚙踝蕭嚙請學範嚙踝蕭"); 
         boolean boo = true;
         char[] chary = { 'V', 'W', 'X', 'Y', 'Z' };
-        byte[] byary = { 65, 66, 67, 68, 69, 70 };
+        // byte[] byary = { 65, 66, 67, 68, 69, 70 };
         System.out.println("嚙踝蕭l嚙緝嚙踝蕭 : " + str);
         System.out.println();
             System.out.println(str.length() + "/" + str.capacity());       

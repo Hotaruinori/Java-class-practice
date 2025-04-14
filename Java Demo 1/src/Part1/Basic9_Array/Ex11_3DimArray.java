@@ -1,4 +1,6 @@
+package Part1.Basic9_Array;
 
+// 11.3D Array
 public class Ex11_3DimArray
 {
 	public static void main(String[] args)
@@ -17,4 +19,4 @@ public class Ex11_3DimArray
 }
 
 
-// «Ø¥ß6*2­Ó¤@ºû°}¦C,¨C­Ó°}¦C¤j¤p¬O4
+// å»ºç«‹6*2å€‹ä¸€ç¶­é™£åˆ—,æ¯å€‹é™£åˆ—å¤§å°æ˜¯4

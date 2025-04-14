@@ -16,5 +16,7 @@ public class Wrapper03_ToString
         //使用String類別的類別方法valueOf()轉換成字串
         String s5 = String.valueOf(1234);
         String s6 = String.valueOf(1.23);
+        System.out.println(s5);
+        System.out.println(s6);
     }
 }

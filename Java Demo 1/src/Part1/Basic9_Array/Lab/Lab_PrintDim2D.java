@@ -1,24 +1,25 @@
-
+package Part1.Basic9_Array.Lab;
 public class Lab_PrintDim2D
 {
 	public static void main(String[] args)
 	{
 		int[][] ary = {{2,4,6,8},{1,3,5,7},{10,11,12,13}};
 				
-        System.out.println("¿é¥X©Ò¦³¤¸¯À:");
+        System.out.println("è¼¸å‡ºæ‰€æœ‰å…ƒç´ :");
         
         int x,y;
         
-        //¨Ï¥ÎlengthÄÝ©Ê
+        //ä½¿ç”¨lengthå±¬æ€§
         for (x=0; x<ary.length; x++)
         {
-            
-         
-          
-            
-            
-            
+            for (y=0; y<ary[x].length; y++){
+                // System.out.print(ary[x][y] + "\t");
+                System.out.print(String.format("%-4s", ary[x][y]));
+            }
+            System.out.println();
         }
+
+            
                
     }   
 }

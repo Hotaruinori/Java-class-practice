@@ -1,13 +1,13 @@
-
+package Part1.Basic9_Array;
 import java.util.*;
 
 public class Ex07_ArrayList
 {
 	public static void main(String[] args)
 	{
-        ArrayList<Integer> list = new ArrayList<>(5);
+        ArrayList<Integer> list = new ArrayList<>();
         //Vector<Integer>  list = new Vector<Integer>(5,2);
-	    list.add(10);
+	list.add(10);
         list.add(12);
         list.add(14);
         list.add(16);
@@ -16,11 +16,11 @@ public class Ex07_ArrayList
         list.add(22);
         list.add(24);
         
-        //¿é¥X®e¾¹¤º®e
+        //è¼¸å‡ºå®¹å™¨å…§å®¹
         System.out.println(list);
         
         System.out.println();
-        //¿é¥X¤è¦¡¤G
+        //è¼¸å‡ºæ–¹å¼äºŒ
         for(Integer element : list) System.out.print(element + "\t");
         
         System.out.println();

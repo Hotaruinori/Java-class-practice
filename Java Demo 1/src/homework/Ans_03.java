@@ -1,5 +1,5 @@
 package homework;
-// 3.執行 java XXX 參數印出 參數
+// 3.執行 java 參數印出 參數
 public class Ans_03 {
     public static void main(String[] args) {
 		
