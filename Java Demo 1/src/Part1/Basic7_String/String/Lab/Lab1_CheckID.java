@@ -1,4 +1,5 @@
 //Lab1: 身分證字號檢查
+// 03 王鈞弘 2025/04/15
 package Part1.Basic7_String.String.Lab;
 import java.util.*;
 
@@ -101,33 +102,37 @@ public class Lab1_CheckID
         n=33;
         break;
       default:
-        System.out.println("首字字元不正確");
+        System.err.println("首字字元不正確");
         System.exit(0);
     }
         
     // 檢查身分證字號性別欄
     ch = id.charAt(1);
     if (ch !='1' && ch !='2' ){
-        System.out.println("性別欄不正確");
+        System.err.println("性別欄不正確");
         System.exit(0);
     }
     // 檢查第3~第10個字元    
     for(int i=2;i<=9;i++){
         if(!Character.isDigit(id.charAt(i))){
-            System.out.println("第"+(i+1)+"個字元不正確");
+            System.err.println("第"+(i+1)+"個字元不正確");
             System.exit(0);
         }
     }
     //total=首字字元的加權值 
     total = n/10 + (n%10) * 9; 
-    System.out.println("總和值:" + total);
+
     //total=total+其他字元的加權值(A 12345678 9)
-    for(int i=1 ; i<=8 ; i++){
-        total += (id.charAt(i)-'0') * (8 - i + 1);
+    for(int i=1, y= 8 ; i<=8 ; i++, y--){
+        total += (id.charAt(i)-'0') * y ;
+        // total += Integer.parseInt(id.substring(i, i+1)) * y ; 另外寫法
     }
     total += (id.charAt(9)-'0');
-    // System.out.println("總和值:" + total);
+    // total += id.getNumericValue(id.charAt(9));  另外寫法
+
+
     //檢查總和的餘數
+    // System.out.println("總和值:" + total);
     if(total % 10 == 0)
         System.out.println("是身分證字號");
     else
