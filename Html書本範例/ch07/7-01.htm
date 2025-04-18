@@ -6,14 +6,40 @@
 </head>
 
 <body>
-  <p style="line-height: 1em;">
+  <!-- 相對單位如百分比只有在font-size會受中間層倍率的影響，line-height不會 -->
+  <div style=" line-height: 200%; font-size: 150%;">
+    這是第一段文字這是第0段文字這是第0段文字<br>
+    這是第0段文字
+  <!-- 行高notmal為預設值 ，大約為1.2-1.3倍字形高度-->
+  <p style="line-height: normal;">
+    這是第一段文字這是第一段文字這是第一段文字<br>
+    這是第一段文字(normal)
+    </p>
+  <p style="line-height: 1.2rem;">
+    這是第一段文字這是第一段文字這是第一段文字<br>
+    這是第一段文字(1.2 rem)
+    </p>
+  <p style="line-height: 1rem;">
   這是第一段文字這是第一段文字這是第一段文字<br>
-  這是第一段文字
+  這是第一段文字 (1 rem)
   </p>
-  <p style="line-height: 1.5em;">
+  <p style="line-height: 1.5rem;">
   這是第二行文字這是第二段文字這是第二段文字<br>
-  這是第二段文字
+  這是第二段文字(1.5 rem)
   </p>
+  <p style="line-height: 30px;">
+    這是第二行文字這是第二段文字這是第二段文字<br>
+    這是第二段文字 (30px)
+    </p>
+  <p style="line-height: 100%;">
+    這是第二行文字這是第二段文字這是第二段文字<br>
+    這是第二段文字 (100%)
+    </p>
+  <p style="font-size: 200%;">
+    這是第二行文字這是第二段文字這是第二段文字<br>
+    這是第二段文字 (100%)
+    </p>
+  </div>
 </body>
 
 </html>

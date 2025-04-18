@@ -4,14 +4,21 @@
 <head>
     <title>範例</title>
     <style>
+        /* 陰影負數可以改變方向 */
     	h1 {
     		color: #ff0000f7;
-            text-shadow: 1px 1px 3px #000000;
+            text-shadow: 5px -5px 2px #4f8508;
     	}
+        /* 利用文字陰影做出凸字效果 */
         p {
             color: #ffffff;
             background-color: #aaaaaa;
-            text-shadow: -1px -1px 0px #000000;
+            text-shadow: -1px -1px 1px #000000;
+        }
+        #test {
+            color: #aaaaaa;
+            background-color: #aaaaaa;
+            text-shadow: -1px -1px 1px #000000;
         }
     </style>
 </head>
@@ -19,6 +26,10 @@
 <body>
     <h1>靜夜思  李白</h1>
     <p>
+		床前明月光，疑是地上霜。<br>
+		舉頭望明月，低頭思故鄉。
+	</p>
+    <p id="test">
 		床前明月光，疑是地上霜。<br>
 		舉頭望明月，低頭思故鄉。
 	</p>

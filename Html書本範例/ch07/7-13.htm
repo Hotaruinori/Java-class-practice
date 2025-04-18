@@ -11,16 +11,19 @@
         .textshadow1 {
             color:#ffffff; 
             background:#333333;
+            /* 光暈字 */
             text-shadow:0 0 20px #ff6600;            
         }
         .textshadow2 {
+            /* 內嵌字要整體配合 */
             color: #717171; 
             background:#d3d3d3;
             text-shadow: 0 1px 1px #ffffff; 
         }    
     	.textshadow3 {
             color: #cccccc; 
-            background:#d3d3d3;            
+            background:#d3d3d3; 
+            /* 多層陰影            */
     		text-shadow: 
                 -1px -1px #ffffff, 
                 1px 1px #333333; 
@@ -28,13 +31,25 @@
         .textshadow4{
             color:#fff; 
             background:#3699f6;
+            /* 連續偏移 顏色慢慢加深 */
             text-shadow: 
-                0 1px 0 #cccccc,
-                0 2px 0 #c9c9c9,
-                0 3px 0 #bbbbbb,
-                0 4px 0 #b9b9b9,
-                0 5px 0 #aaaaaa;
+            1px 1px 0 #cccccc,
+            2px 2px 0 #c9c9c9,
+            3px 3px 0 #bbbbbb,
+            4px 4px 0 #b9b9b9,
+            5px 5px 0 #aaaaaa;
         }    
+        .textshadow5 {
+            color: #bb8383; 
+            background:#cccccc; 
+            /* 多層陰影            */
+    		text-shadow: 
+                -2px -2px #333333,
+                -1px -1px #333333, 
+                2px 2px #ffffff, 
+                1px 1px #ffffff; 
+                
+    	}
     </style>
 </head>
 
@@ -43,6 +58,7 @@
     <h1 class="textshadow2">HTML5 & CSS3 - 內嵌字</h1>
     <h1 class="textshadow3">HTML5 & CSS3 - 浮凸字</h1>
     <h1 class="textshadow4">HTML5 & CSS3 - 立體字</h1>
+    <h1 class="textshadow5">HTML5 & CSS3 - 凹陷字</h1>
 </body>
 
 </html>

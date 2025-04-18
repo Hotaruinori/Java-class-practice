@@ -4,19 +4,59 @@
 <head>
     <title>範例</title>    
     <style>
-    	@font-face {
+		/* 以font-face語法對應字型檔和自訂的字型名稱 */
+		@font-face {
+			font-family: testfont1;
+			src: url(fonts/XiaolaiMonoSC-Regular.ttf);
+		}  
+		@font-face {
+			font-family: testfont2;
+			src: url(fonts/XiaolaiSC-Regular.ttf);
+		}  
+		@font-face {
+			font-family: testfont3;
+			src: url(fonts/Yozai-Light.ttf);
+		}  
+		@font-face {
+			font-family: testfont4;
+			src: url(fonts/Yozai-Medium.ttf);
+		}  
+		@font-face {
     		font-family: MyFont;
-    		src: url('GloriaHallelujah.ttf');
+    		src: url(fonts/GloriaHallelujah.ttf);
     	}
-		p {font-family: MyFont;}    	
+		p {font-family: MyFont;
+		}  
+		p#font1 {font-family: MyFont, testfont1;
+		}  
+		p#font2 {font-family: MyFont, testfont2;
+		}  
+		p#font3 {font-family: MyFont, testfont3;
+		}  
+		p#font4 {font-family: MyFont, testfont4;
+		} 
     </style>
 </head>
 
 <body>
- <p>Bright moonlight before my bed,<br>
- I suppose it is frost on the ground.<br>
- I raise my head to view the bright moon,<br> 
- Then lower it, thinking of my home village.</p>
+	<p>Bright moonlight before my bed,<br>
+	I suppose it is frost on the ground.<br>
+	I raise my head to view the bright moon,<br> 
+	Then lower it, thinking of my home village.</p>
+	<p id = font1>醫工作，過真的沒圖回都好可。啊啊，剩下嗚嗚嗚在幹果一黑⋯實驗不是前的我好想。欸欸欸人才歡我的，父現在叔活動有些，以前文的是發四⋯都會被是沒有。
+	結果喜歡見面不過詞的錯賣貨便我：的歌出現在得一，常好奇麼可以某了一下，去遺書上打的，重要居然沒沒時被黑暗，不要有其我覺失。時不出來開我自己真的能。一定很好可愛絕對可在不過去？你的，如果醒二天條看起，我現歲家都是。服的這樣就確的互動覺得，上不，錯過那個我嗚實我看就然後⋯
+	</p>
+	<p id = font2>醫工作，過真的沒圖回都好可。啊啊，剩下嗚嗚嗚在幹果一黑⋯實驗不是前的我好想。欸欸欸人才歡我的，父現在叔活動有些，以前文的是發四⋯都會被是沒有。
+	結果喜歡見面不過詞的錯賣貨便我：的歌出現在得一，常好奇麼可以某了一下，去遺書上打的，重要居然沒沒時被黑暗，不要有其我覺失。時不出來開我自己真的能。一定很好可愛絕對可在不過去？你的，如果醒二天條看起，我現歲家都是。服的這樣就確的互動覺得，上不，錯過那個我嗚實我看就然後⋯
+	</p>
+	<p id = font3>醫工作，過真的沒圖回都好可。啊啊，剩下嗚嗚嗚在幹果一黑⋯實驗不是前的我好想。欸欸欸人才歡我的，父現在叔活動有些，以前文的是發四⋯都會被是沒有。
+	結果喜歡見面不過詞的錯賣貨便我：的歌出現在得一，常好奇麼可以某了一下，去遺書上打的，重要居然沒沒時被黑暗，不要有其我覺失。時不出來開我自己真的能。一定很好可愛
+	絕對可在不過去？你的，如果醒二天條看起，我現歲家都是。服的這樣就確的互動覺得，上不，錯過那個我嗚實我看就然後⋯
+	</p>
+	<p id = font4>醫工作，過真的沒圖回都好可。啊啊，剩下嗚嗚嗚在幹果一黑⋯實驗不是前的我好想。欸欸欸人才歡我的，父現在叔活動有些，以前文的是發四⋯都會被是沒有。
+	結果喜歡見面不過詞的錯賣貨便我：的歌出現在得一，常好奇麼可以某了一下，去遺書上打的，重要居然沒沒時被黑暗，不要有其我覺失。時不出來開我自己真的能。一定很好可愛
+	絕對可在不過去？你的，如果醒二天條看起，我現歲家都是。服的這樣就確的互動覺得，上不，錯過那個我嗚實我看就然後⋯
+	</p>
 </body>
 
 </html>

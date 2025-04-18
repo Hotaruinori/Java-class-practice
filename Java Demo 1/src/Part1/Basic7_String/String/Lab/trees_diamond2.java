@@ -17,7 +17,7 @@ public class trees_diamond2 {
             int tree_levels = Integer.parseInt(input);
 
             if (tree_levels % 2 == 1) {
-                DiamondPrinter d = new DiamondPrinter();
+                DiamondPrinter2 d = new DiamondPrinter2();
                 game_is_on = d.draw_tree(tree_levels);
             }
             else if (tree_levels == 0) {
@@ -31,7 +31,7 @@ public class trees_diamond2 {
 
     }
 }
-class DiamondPrinter {
+class DiamondPrinter2 {
     public boolean draw_tree(int tree_levels) {
         // 列印菱形
         int i, j;

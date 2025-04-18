@@ -4,21 +4,69 @@
 <head>
     <title>範例</title>
     <style>
-    p { font-size: 36px; margin: 2px;}
-    .style1 { font-size: 0.5em; vertical-align: top;}
+    p { font-size: 2rem; margin: 2px; background-color: antiquewhite;}
+    /* 圖片與文字同時排版時，會有吊腳的現象，可以選定img補設vertical-align的任一值即可解決 */
+    img {background-color: aquamarine; vertical-align:text-bottom;}
+    /* 對齊同一行其他元素(包含文字)的最上方 */
+    .style1 { font-size: 1rem; vertical-align: top;}
+    /* 對齊文字元素的上方 */
     .style2 { font-size: 0.5em; vertical-align: text-top;}
+    /* 對齊同一行其他元素(包含文字)的最下方 */
     .style3 { font-size: 0.5em; vertical-align: bottom;}
+    /* 如果文字縮小，不需要設定vertical-align反而可以對其文字下方的基準線 */
     .style4 { font-size: 0.5em; vertical-align: text-bottom;}
+    .style4-1 { font-size: 1rem;}
     .style5 { font-size: 0.5em; vertical-align: middle;}
+    /* 快速實現垂直居中或水平居中效果。 display: flex;內部的子元素（直接子級）會自動成為 Flex 項目（Flex Items），
+    並按照 Flexbox 的規則排列。預設排列方向為水平（row），子元素會從左到右排列。
+    align-items: center;如果 Flex 方向是預設的 row（水平），則交叉軸是垂直方向，此屬性會讓子元素在垂直方向上 居中對齊*/
+    .style6 { display: flex; align-items: center;}
+
+    .containter{display: table;}
+    .content{display: table-cell; vertical-align: middle;}
+    .image-container{
+        width: 90%;
+        margin: 0 5%;  /*上下為0，左右為5%*/
+        text-align: justify;
+    }
+    .image1{
+        float: right;
+        margin-left:  10px;
+        margin-bottom: -15px;
+    }
+    .image2{
+        float: left;
+        margin-right:  10px;
+        margin-bottom: -10px;
+    }
     </style>
 </head>
 
 <body>
+    <!-- span被p包著，這邊指的上一層元素的意思 -->
 	<p>This is <span class="style1">CSS3</span><img src="css3.png"></p>
 	<p>This is <span class="style2">CSS3</span><img src="css3.png"></p>
 	<p>This is <span class="style3">CSS3</span><img src="css3.png"></p>
 	<p>This is <span class="style4">CSS3</span><img src="css3.png"></p>
+    <p>This is <span class="style4-1">CSS3</span><img src="css3.png"></p>
 	<p>This is <span class="style5">CSS3</span><img src="css3.png"></p>
+    <!-- 容器置中 -->
+    <p class="style6">This is <span class="style5">CSS3</span><img src="css3.png"></p>
+    
+    <div class="container">
+        <div class="content">This is</div>
+        <div class="content">CSS3</div>
+        <span class="content"><img src="css3.png" alt="CSS3 Logo"></span>
+      </div>
+
+    <!-- 文繞圖 -->
+    <div class="image-container">
+        <img class="image1" src="http://zh-tw.learnlayout.com/images/ilta.png"  alt=""/>
+        <p class="pp1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  
+        <img class="image2" src="http://zh-tw.learnlayout.com/images/ilta.png" alt="" />
+        <p class="pp2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div><!-- image-container -->
 </body>
 
 </html>
