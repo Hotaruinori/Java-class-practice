@@ -1,6 +1,4 @@
 package Part1.Basic7_String.Parameters.Lab;
-
-//Transfer
 class Transfer
 {
 	float f;	
@@ -16,7 +14,9 @@ public class Lab_C2F
 {
 	public static void main(String[] args)
 	{
+		System.out.println("必要參數遺失");
 
+		System.out.println();
 
 
 
