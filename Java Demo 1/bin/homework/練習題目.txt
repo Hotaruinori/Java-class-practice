@@ -1,0 +1,55 @@
+1. 確認 java 版本為 22版
+2.印出helloworld, 請使用記事本編輯
+3.執行 java XXX 參數印出 參數
+4.使用scanner接收鍵盤輸入1字串, 由螢幕目輸出
+4.使用scanner接收鍵盤輸入1字串, 若輸入字串為 exit 則跳出程式結束
+4.使用scanner接收鍵盤輸入1字串, 若輸入字串為 A 則輸出10, 若輸入字串為 B 則輸出20, 若輸入字串為 exit 則跳出程式結束
+4.使用迴圈for 印出 1到10的數字
+5.使用迴圈while 印出 1到10的數字
+6.使用迴圈do while 印出 1到10的數字
+7.使用迴圈計算1+2+3加到100的總合
+8.使回遞迴Recursion計算1加到100的總合 N!=N+(N-1)!
+9. 潤年計算
+年份能被 4 整除，但不能被 100 整除，或者
+年份能被 400 整除。
+
+//判斷天數
+  int a = year % 4;
+  int b = year % 100;
+  int c = year % 400;
+  int day = 365 ;
+  
+  if(a == 0 || c == 0 && b != 0 )//為閏年
+  {
+   day = 366 ;
+  }
+  
+  else//不為閏年
+  {
+   day = 365 ;
+  }
+  
+  return day;//回傳結果
+ }
+
+----------------------
+    public static boolean isLeapYear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return true; // 能被400整除，是潤年
+                } else {
+                    return false; // 不能被400整除，不是潤年
+                }
+            } else {
+                return true; // 能被4整除且不能被100整除，是潤年
+            }
+        } else {
+            return false; // 不能被4整除，不是潤年
+        }
+    }
+
+
+10.亂數
+
+

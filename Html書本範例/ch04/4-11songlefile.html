@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單的單一檔案上傳</title>
+</head>
+<body>
+    <div>
+        
+        <form action="4-11_upload_single_file.php" method="post" enctype="multipart/form-data">
+            選擇檔案：
+            <input type="file" id="my_file" name="my_file"  />
+            <br/>
+            <input type="submit" value="上傳檔案" />
+        </form>
+
+
+    </div>
+</body>
+</html>
+<!--設定PHP檔案上傳大小的限制：xampp control panel > Apache > config > php.ini > 
+    upload_max_filesize/post_max_size > 將2M改為想要的大小後 > 重新啟動Apache伺服器
+-->
+

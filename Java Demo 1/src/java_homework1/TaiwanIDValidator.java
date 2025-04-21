@@ -21,7 +21,7 @@ public class TaiwanIDValidator {
             return true;
         } 
         else {
-            System.out.println("身分證字號不合法！");
+            System.err.println("身分證字號不合法！");
             return false;
         }
     }
@@ -30,7 +30,7 @@ public class TaiwanIDValidator {
         // 身分證字號的正規表達式
         String regex = "^[A-Z][12]\\d{8}$";
         if (!id.matches(regex)) {
-            System.out.println("身分證字號不符合格式！(英文需大寫)");
+            System.err.println("身分證字號不符合格式！(英文需大寫)");
             return false; // 不符合格式
         }
         // 計算校驗碼
