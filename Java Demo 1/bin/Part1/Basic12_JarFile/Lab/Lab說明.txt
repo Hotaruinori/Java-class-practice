@@ -1,0 +1,14 @@
+
+  1.將 big
+       │   
+       └lotto
+          │  
+          └Lotto.class
+
+    建立『xxxxxxx.jar』檔案 (名稱自訂)
+    
+  2.class Lotto 中定義了物件方法 getNumber()
+
+    來自動產生號碼(號碼不重複)
+
+  3.WinLottery.java 含 main()方法
