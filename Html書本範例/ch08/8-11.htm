@@ -5,15 +5,19 @@
     <title>範例</title>
     <style>
     	div {
-    		font-size: 15pt;
+    		font-size: 1.5rem;
     		text-align: center;
     		padding: 20px;
+			/* border: blue 2px solid; */
     		background-color: #FF0000;
     	}
+		/* 設定透明度，連字體也會 */
     	.opacity1 { opacity: 0.25}
     	.opacity2 { opacity: 0.5}
     	.opacity3 { opacity: 0.75}
     	.opacity4 { opacity: 1.0}
+		/* 給顏色時RGB的第4個參數也可以設定透明度 */
+		.opacity5 { background-color: rgb(255, 0, 0, 50%);}
     </style>
 </head>
 
@@ -22,6 +26,7 @@
 <div class="opacity2">透明度50%</div>
 <div class="opacity3">透明度75%</div>
 <div class="opacity4">透明度100%</div>
+<div class="opacity5">透明度50%</div>
 </body>
 
 </html>

@@ -5,24 +5,29 @@
     <title>範例</title>
     <style>
     div {
-        font-size: 15pt;
+        font-size: 1.5rem;
         text-align: center; color: white;
-        padding: 20px; margin-bottom: 10px;
+        padding: 20px; margin-bottom: 50px;
     }
     .linear1 { background: linear-gradient(to bottom, yellow, green);}
+    /* 上方：0deg , 右方：90deg , 下方：180deg,  左方：270deg */
     .linear2 { background: linear-gradient(0deg, yellow, green);}
     .linear3 { background: linear-gradient(to right bottom, yellow, green);}
-    .linear4 { background: linear-gradient(to left, yellow 30%, green 70%);} 
-    .linear5 { background:  linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);}	    	    	
+    .linear4 { background: linear-gradient(to right, yellow 10%, green 200%);} 
+    .linear5 { background:  linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);}	
+    .BG {background: linear-gradient(to right, rgb(0, 255, 234), rgb(0, 19, 128));}	
+    /* .BG {background-color: aqua;} */
     </style>
 </head>
 
-<body>
+<div class="BG">
+<body >
 <div class="linear1">向下漸層</div>
 <div class="linear2">指定角度漸層</div>
 <div class="linear3">對角線漸層</div>
 <div class="linear4">指定範圍漸層</div>
 <div class="linear5">多層漸層</div>
 </body>
+</div>
 
 </html>

@@ -4,12 +4,22 @@
 <head>
     <title>範例</title>    
     <style>
-    	li {    		
-    		display: inline;
-    		margin-right: 5px;
+    	li {   
+			background-color: aqua;
+			/*display屬性包含：inline、block、inline-block、none*/
+			/* 只有inline時寬高失效 */
+			/* block時寬度預設為100%，高度為auto，自動換行，並反映盒子模型的以下五種樣式*/
+			/* inline-block是inline與block的混合，寬高有效 */
+    		display: inline-block;
+    		margin-right: 15px;
+			border: 1px solid rgb(238, 4, 4);
+			padding: 10px;
+			width: 200px;
+			height: 100px;
+
     	}
         .later{
-            display: none;
+            display: none;s
         }    	
     </style>    
 </head>

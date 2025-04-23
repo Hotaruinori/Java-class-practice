@@ -3,14 +3,23 @@
 
 <head>
     <title>範例</title>
+    <style>
+      * {margin: 0;padding: 0;}
+      html, body {height: 100%;}
+    </style>
 </head>
+<!-- 要配合背景不重複background-repeat: no-repeat，位置關鍵字有：{top center bottom} {left center right} -->
 
-<body style="background-image: url(bg-1.png);background-repeat: no-repeat;background-position: top center;">
+<body>
+    <div style="background-color: antiquewhite; float: left; width: 20%; height: 110%;">test </div>
+    <div style="background-image: url(bg-1.png);background-repeat: no-repeat;background-position: 
+    bottom center;height: 100%; background-attachment: fixed;">
     <h1>靜夜思  李白</h1>
     <p>
 		床前明月光，疑是地上霜。<br>
 		舉頭望明月，低頭思故鄉。
     </p>
+    </div>
 </body>
 
 </html>

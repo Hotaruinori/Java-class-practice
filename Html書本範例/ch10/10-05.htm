@@ -10,8 +10,9 @@
 	  	background-color: lightblue;
 	  	border: 1px dotted black; 
 	  	text-align: center;	 
-	  	line-height: 100px; 	 
-	  	transition: 1s width, 1s background-color 1s;
+	  	line-height: 100px; 	
+		 /* 轉換寬度時沒有延遲，但顏色有延遲1S ，用逗號"，"隔開，可以同時起轉換*/
+	  	transition: 1s width, 3s background-color 1s;
 	}
 	.box:hover {
 		width: 400px;

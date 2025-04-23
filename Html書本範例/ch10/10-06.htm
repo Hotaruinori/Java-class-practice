@@ -5,8 +5,10 @@
     <title>範例</title>    
     <style>
     @keyframes myanimation{
-    	from { background-color: yellow;}
-    	to { background-color: red;}
+    	0% { background-color: yellow;}
+    	50% { background-color: red;}
+		from {top: 0px;}
+		to {top: 100px;}
     }
 
 	.box {
@@ -14,20 +16,25 @@
 	  	height: 150px; 
 	  	background-color: lightgreen;
 	  	border-radius: 50%; 
-	  	border: 1px dotted black; 
+	  	border: 5px dotted black; 
 	  	text-align: center;	 
 	  	line-height: 150px; 
 	  	position: absolute;	 
+		/* 以下為動畫效果 */
 	  	animation-name: myanimation;
 	  	animation-duration: 2s;
 	  	animation-timing-function: ease;
 	  	animation-delay: 1s;
+		/* 動畫重複次數有：1(預設)、infinite */
+		animation-iteration-count: infinite;
+		/* 動畫播放順序有：normal(預設)、reverse、alternate、alternate-reverse */
+		animation-direction: alternate-reverse;
 	}
     </style>    
 </head>
 
 <body>
-	<div class="box">Light</div>
+	<div class="box" style="font-size: 50px;">Light</div>
 </body>
 
 </html>
