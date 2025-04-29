@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8">
+    <title>正則規表示法驗證</title>
+	<script language="javascript">
+	    function checkChinese(element) 
+		{
+			var re = /^[\u0391-\uFFE5]+$/;  //中文編碼範圍
+			if (re.test(element.value))
+			{
+				alert("OK !");
+				//document.form1.submit();  //傳送整張表單
+			}
+			else
+			{
+				alert("Data error !!");
+			}
+		}
+
+		function checkDigit(element)
+		{
+			var re = /^[0-9]+$/;
+			if (re.test(element.value))
+			{
+				alert("OK !");
+			}
+			else
+			{
+				alert("Data error !!");
+			}	
+		}
+
+		function checkAlpha(element)
+		{
+			//re = /^[A-Z]+$/;
+			//element.value=element.value.toUpperCase();
+			var re = /^[A-Za-z]+$/;
+			if (re.test(element.value))
+			{
+				alert("OK !");
+			}
+			else
+			{
+				alert("Data error !!");
+			}	
+		}
+
+		function checkLength(element)
+		{
+			var re = /^[^\s]{4,10}$/;
+			if (re.test(element.value))
+			{
+				alert("OK !");
+			}
+			else
+			{
+				alert("Data error !!");
+			}	
+		}
+
+		function checkPhone(element)
+		{
+			var re = /^09[0-9]{2}-\d{6}$/;
+			if (re.test(element.value))
+			{
+				alert("OK !");
+			}
+			else
+			{
+				alert("Data error !!");
+			}	
+		}
+		document.form1.submit();  //傳送整張表單
+		
+
+	</script>
+
+	<link href="myCSS/formStyle.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+	<form action="" method="get" name="form1" id="form1">
+	  <fieldset>
+	  <legend>表單驗證</legend>
+	  <table width="100%" border="1" cellpadding="2" cellspacing="1">
+		<tbody>
+		  <tr>
+			<th>驗證項目</th>
+			<th>輸入</th>
+		  </tr>
+		  <tr>
+			<td>只允許中文</td>
+			<td><input name="t1" type="text" id="t1" />
+			<input type="button" name="check1" value="驗證" onClick="checkChinese(this.form.t1);" /></td>
+		  </tr>
+		  <tr>
+			<td>只允許數字</td>
+			<td><input name="t2" type="text" id="t2" />
+			<input type="button" name="check2" value="驗證" onClick="checkDigit(this.form.t2);" /></td>
+		  </tr>
+		  <tr>
+			<td>只允許英文</td>
+			<td><input name="t3" type="text" id="t3" />
+			<input type="button" name="check3" value="驗證" onClick="checkAlpha(this.form.t3);" /></td>
+		  </tr>
+		  <tr>
+			<td>限制最小長度(4)及最大長度(10)</td>
+			<td><input name="t4" type="text" id="t4" />
+			<input type="button" name="check4" value="驗證" onClick="checkLength(this.form.t4);" /></td>
+		  </tr>
+		  <tr>
+			<td>檢查手機號碼(09xx-xxxxxx)</td>
+			<td><input name="t5" type="text" id="t5">
+			<input type="button" name="check5" value="驗證" onClick="checkPhone(this.form.t5);" /></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="reset" value="清除"></td>
+		  </tr>
+		</tbody>
+		
+	  </table>
+	  </fieldset>
+	</form>
+  </body>
+</html>

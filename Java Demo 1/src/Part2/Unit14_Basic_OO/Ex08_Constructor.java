@@ -1,5 +1,5 @@
 /* 以建構式來指定屬性的初值 */
-
+package Part2.Unit14_Basic_OO;
 class ShowDate   //定義ShowDate類別
 {
     private int year;   //年份
@@ -14,10 +14,10 @@ class ShowDate   //定義ShowDate類別
    
     public ShowDate()                              //建構1:無參數
     {
-        this.year=2021;
-        this.month=10;
-        this.day=19;
-        //this(2021,10,19);
+        // this.year=2021;
+        // this.month=10;
+        // this.day=19;
+        this(2021,10,19);  //呼叫建構3
     }
    
     public ShowDate(int day)                       //建構2:只有日數參數
@@ -43,6 +43,10 @@ class ShowDate   //定義ShowDate類別
         this.month=month;
         this.day=day;     
     }
+    // 提供 public static 方法來建立完整日期的物件
+    public static ShowDate createFullDate(int year, int month, int day) {
+        return new ShowDate(year, month, day);
+    }
 }
 
 
@@ -61,7 +65,7 @@ public class Ex08_Constructor
         day3 = new ShowDate(10,19);
         day3.printDate();
         
-        //day4 = new ShowDate(2021,10,19);
-        //day4.printDate();
+        day4 = ShowDate.createFullDate(2021,10,19);
+        day4.printDate();
     }
 }

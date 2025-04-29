@@ -15,8 +15,15 @@ public class MyTools{
     }
 
     public static int min(int ... nums){
-        return Arrays.stream(nums).min().orElseThrow();
+        Arrays.sort(nums);
+        return nums[0];
     }
+
+    // public static int min(int ... nums){
+    //     return Arrays.stream(nums).min().orElseThrow();
+    // }
+
+
     // public static int min(int ... nums){
     //     for(int i=0;i<nums.length-1;i++){
     //         if(nums[i]<nums[i+1]){
