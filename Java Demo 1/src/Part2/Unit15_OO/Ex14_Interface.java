@@ -1,6 +1,5 @@
 package Part2.Unit15_OO;
-interface Constants
-{
+interface Constants{
     int LINE=101;
 	int RECTANGLE=102;
 	int CIRCLE=103;
@@ -9,14 +8,12 @@ interface Constants
 }
 
 
-class Element implements Constants
-{
+class Element implements Constants{
+	@Override
     public void show(){}
     
-	String createElement(int element)
-	{
-		switch(element)
-		{
+	String createElement(int element){
+		switch(element){
 			case Constants.LINE: 	
 				return "直線";
             case Constants.RECTANGLE: 

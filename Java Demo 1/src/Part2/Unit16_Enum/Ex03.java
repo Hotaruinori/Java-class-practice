@@ -1,10 +1,10 @@
-
+package Part2.Unit16_Enum;
 enum Suit
 {
-    SPADES   ("¶Â®ç"),
-    HEARTS   ("¬õ¤ß"),
-    DIAMONDS ("¬õ¿j"),
-    CLUBS    ("±öªá");
+    SPADES   ("é»‘æ¡ƒ"),
+    HEARTS   ("ç´…å¿ƒ"),
+    DIAMONDS ("ç´…ç£š"),
+    CLUBS    ("æ¢…èŠ±");
     
     private final String title;
     
@@ -48,6 +48,6 @@ public class Ex03
     {
         PlayCard card1 = new PlayCard(Suit.HEARTS, 7);
         System.out.println("card1 is the " + card1.getRank() + " of " + card1.getSuit().getTitle());
-        PlayCard card2 = new PlayCard("¬õ¤ß", 5);
+        // PlayCard card2 = new PlayCard("ç´…å¿ƒ", 5);
     }
 }

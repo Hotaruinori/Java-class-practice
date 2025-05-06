@@ -51,7 +51,7 @@ class Rectangle extends Shape  //Rectangle類別宣告
 public class Ex11_Abstract
 { 
     public static void main(String[] args) 
-    {
+    {   
         Circle c1 = new Circle(5, 10, 400);
         System.out.println("=== 圓形c1的資料 ===");
         System.out.println("X座標: " + c1.x);
@@ -59,7 +59,7 @@ public class Ex11_Abstract
         c1.area();
         c1.getColor();
         System.out.println();
-        
+        //宣告父類別的物件，子類別的建構
         Shape c2 = new Circle(5, 500, 400);
         System.out.println("=== 圓形c2的資料 ===");
         System.out.println("X座標: " + c2.x);

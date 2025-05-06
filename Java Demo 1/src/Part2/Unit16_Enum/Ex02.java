@@ -1,4 +1,4 @@
-
+package Part2.Unit16_Enum;
 enum Suit
 {
     SPADES,
@@ -35,19 +35,19 @@ class PlayCard
         switch( suit )
         {
             case SPADES:
-                 title = "¶Â®ç";
+                 title = "é»‘æ¡ƒ";
                  break;
             case HEARTS:
-                 title = "¬õ¤ß";
+                 title = "ç´…å¿ƒ";
                  break;
             case DIAMONDS:
-                 title = "¬õ¿j";
+                 title = "ç´…ç£š";
                  break;
             case CLUBS:
-                 title = "±öªá";
+                 title = "æ¢…èŠ±";
                  break;
             default:
-                 title = "°­µP";     
+                 title = "é¬¼ç‰Œ";     
          }        
          return title; 
     }                                 

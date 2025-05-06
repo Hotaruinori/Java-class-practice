@@ -5,7 +5,7 @@ interface NewInterface
     
     abstract void area();
    
-    public void show()  //default方法
+    default void show()  //default方法
     {
         System.out.println("NewInterface_default 方法:" + "Hi everyone !!");
     }
