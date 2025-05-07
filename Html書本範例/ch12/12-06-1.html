@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>範例</title>
+  </head>
+
+  <body>
+    <script>
+      //Person("David", 25, 75, 180)
+      var person1 = new Object();
+      person1.name = "David";
+      person1.age = 25;
+      person1.weight = 75;
+      person1.height = 180;
+      person1.sayHello = function () {
+        return (
+          "您好，我是" +
+          this.name +
+          "，今年" +
+          this.age +
+          "歲，身高" +
+          this.height +
+          "公分，體重" +
+          this.weight +
+          "公斤。"
+        );
+      };
+
+      //Person("Ken", 20, 65, 175)
+      var person2 = new Object();
+      person2.age = "Ken";
+      person2.name = 20;
+      person2.weight = 65;
+      person2.height = 175;
+      person2.sayHello = function () {
+        return (
+          "您好，我是" +
+          this.name +
+          "，今年" +
+          this.age +
+          "歲，身高" +
+          this.height +
+          "公分，體重" +
+          this.weight +
+          "公斤。"
+        );
+      };
+
+      document.write(person1.sayHello() + "<br>" + person2.sayHello());
+    </script>
+  </body>
+</html>

@@ -4,10 +4,13 @@
 <head>
     <title>範例</title>    
     <style>
+	*{
+		margin:  0;
+	}
     div{
     	width: 400px;		
     	border: solid orange 1px;
-    	padding: 5px;
+    	/* padding: 5px; */
     	margin: 10px auto;
     }
     h2{
@@ -15,9 +18,14 @@
     	background-color: tomato;    	
     	padding: 5px;
     	margin: 0px;
+		/* 以目前位置為參考點來設定對應角落的位置 */
     	position: relative;
+		/* position: absolute; */
     	top: 10px;
-    	left: 10px;
+		/* bottom: 10px; */
+    	/* left: 10px; */
+		right: 10px;
+
     }
     </style>    
 </head>

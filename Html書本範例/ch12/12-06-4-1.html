@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>範例</title>
+    <script>
+      //產生自訂物件的<方法四>以ES6的class關鍵字先宣告類別,再建立物件
+      class Person {
+        constructor(data) {
+          this.name = data.name;
+          this.age = data.age;
+          this.weight = data.weight;
+          this.height = data.height;
+        }
+        sayHello = function () {
+          return (
+            "您好，我是" +
+            this.name +
+            "，今年" +
+            this.age +
+            "歲，身高" +
+            this.height +
+            "公分，體重" +
+            this.weight +
+            "公斤。"
+          );
+        };
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      var person1 = new Person({
+        name: "David",
+        age: 25,
+        weight: 75,
+        height: 180,
+      });
+      var person2 = new Person({
+        name: "Ken",
+        age: 20,
+        weight: 65,
+        height: 175,
+      });
+      document.write(person1.sayHello() + "<br>" + person2.sayHello());
+    </script>
+  </body>
+</html>

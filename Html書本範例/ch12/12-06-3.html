@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>範例</title>
+    <script>
+      //產生自訂物件的<方法三>建立類別函式(產生物件的函式)
+      function Person(name, age, weight, height) {
+        //建立物件的屬性
+        this.name = name; //實作中必須出現this關鍵字描述屬性和方法
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        //建立物件的方法
+        this.sayHello = function () {
+          return (
+            "您好，我是" +
+            name +
+            "，今年" +
+            age +
+            "歲，身高" +
+            height +
+            "公分，體重" +
+            weight +
+            "公斤。"
+          );
+        };
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      var person1 = new Person("David", 25, 75, 180);
+      var person2 = new Person("Ken", 20, 65, 175);
+      document.write(person1.sayHello() + "<br>" + person2.sayHello());
+    </script>
+  </body>
+</html>

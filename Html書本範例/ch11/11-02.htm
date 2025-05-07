@@ -8,12 +8,21 @@
 <body>
 <script>
 	// 宣告變數可以省略 var
-	var myName = "David";	//宣告姓名
+	let myName = "David";	//宣告姓名
 	var myAge = 25;			//宣告年齡
+	var mygender = true;		//宣告性別 1代表男性，0代表女性
 	var myHeight = 180, myWeight = 75;	//宣告身高體重
+	var 我的變數 = 200;
 	document.write("大家好，我是" + myName + "，<br/>");
 	document.write("身高" + myHeight +"公分，體重" + myWeight + "公斤，<br/>");
+	document.write("BMI：" + (myWeight / (myHeight/100*myHeight/100)).toFixed(1) + "<br/>" )
+	if (mygender) {
+		document.write("我是男性。");
+	} else {
+		document.write("我是女性。");
+	}
 	document.write("今年" + myAge + "歲。");
+	document.write("我有" + 我的變數 + "個變數。");
 </script>
 </body>
 </html>
