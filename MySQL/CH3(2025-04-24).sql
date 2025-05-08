@@ -1,4 +1,5 @@
--- E為次方的意思，如5E+3 = 5000，+可略
+-- E為次方的意思，如5E+3 = 5000 代表5*10的3次方，+可省略
+-- SQL最多可以會儲存小數點後30位數 
 SELECT 0.1 + 0.1 = 0.2, 0.1E0 + 0.1E0 = 0.2E0;
 SELECT 0.1 + 0.2 = 0.3, 0.1E0 + 0.2E0 = 0.3E0; -- 後者不相等
 SELECT 1 + '2', '1' + '2' , '1E+2' + '2E-2'; -- 照樣計算 但非數字會警告
@@ -9,7 +10,11 @@ SET SQL_MODE = 'PIPES_AS_CONCAT'; -- 跑過這個設定才可以字串連接
 SELECT 'Hello'   'MySQL';
 SET sql_mode = 'IGNORE_SPACE'; 
 SET SQL_MODE ='';
+-- 建議直接省用 CONCAT or CONCAT_WS函式 ，CONCAT_WS函式第一個值為要用來連結的文字(或符號)，要加' '引號
+select concat(name, continent, region) from world.country;
+select concat_ws('$$$', name, continent, region) from world.country;
 
+-- 判斷null值如果直接用=等算術運算式或比較運算式，結果會全部都是null 
 SELECT NULL = NULL, NULL < NULL, NULL != NULL, NULL +3 ;
 SELECT NULL is NULL, NULL is not NULL, NULL <=> NULL ;
 
@@ -50,8 +55,8 @@ ORDER BY length DESC;
 
 -- A123456789 從第二個位置取一個值
 SELECT substring('A123456789', 2, 1);
-SELECT ltrim('  A123456789'); -- 消除左邊空白
-SELECT Rtrim('  A123456789'); -- 消除右邊空白
+SELECT ltrim('  A123456789'   ); -- 消除左邊空白
+SELECT Rtrim('  A123456789'   ); -- 消除右邊空白
 SELECT Trim('  A123456789'); -- 消除左右邊空白
 SELECT substring(Trim('  A123456789'), 2, 1);
 
@@ -229,3 +234,32 @@ extract(day FROM curdate()) as day;
 
 #15 顯示現在時間之後的3小時的'時'的部分為何?
 SELECT hour(curtime() + interval 3 hour);
+
+#16 請用適當函式如下說明顯示字串AppleOrangeMango的變化
+-- 1. 共有幾個字元
+-- 2. 顯示從左邊開始5個字元
+-- 3. 顯示從右邊開始5個字元
+-- 4. 顯示從第5個字元開始，存取6個字元
+select length('AppleOrangeMango');
+select left('AppleOrangeMango', 5);
+select right('AppleOrangeMango', 5);
+select substring('AppleOrangeMango', 5, 6);
+
+#17 使用concat_ws函式
+-- 1. 使用world資料庫的country資料表
+-- 2. 將欄位code與name欄位內容連結起來，中間用$$$隔開
+select * from world.country;
+select concat_ws('$', code, name) from world.country;
+
+#18 使用cmdev資料庫
+-- 1. 計算進入公司年度等於1981年者，年終獎金(bonus)為月薪的2倍。
+-- 2. 顯示欄位ename, hiredate, salary, bonus。
+select ename, hiredate, salary, salary*2 as bonus from cmdev.emp where year(hiredate) = 1981;
+
+#19 使用cmdev資料庫
+-- 1. 使用emp資料表。
+-- 2. 找出並顯示該公司總共有幾種職務名稱之語法。
+select count(distinct job) from cmdev.emp;
+
+
+
