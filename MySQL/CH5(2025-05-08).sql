@@ -39,7 +39,11 @@ update ignore cmdev.dept set dname = 'UPDATE', location = 'Koashum' where deptno
 
 -- 如果修改值與欄位格式不同會直接變0? 
 update cmdev.emp set salary = salary + 100 where deptno = 99 order by salary;
-update cmdev.emp set salary = 'Hello' where deptno = 7369 ;
+update cmdev.emp set salary = 900 where empno = 7369 ;
 update cmdev.emp set salary = salary + 5 where deptno = 10 order by salary ASC limit 3 ;
+
+-- delete
+delete from cmdev.emp where ?
+-- 交易紀錄功能(INNODB Engine)，如沒有完成全部指令會啟動 交易紀錄功能 回復之前狀態
 
 
