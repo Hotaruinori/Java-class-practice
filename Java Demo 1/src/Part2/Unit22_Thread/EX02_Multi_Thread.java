@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class EX02 extends Thread 
 {
     private String id;
@@ -29,7 +29,7 @@ public class EX02_Multi_Thread
         EX02 cat=new EX02("kitty");
         EX02 bear=new EX02("pooh");
       
-        System.out.println("¶}©l -\n");
+        System.out.println("é–‹å§‹ -\n");
         dog.start();
         cat.start();
         bear.start();

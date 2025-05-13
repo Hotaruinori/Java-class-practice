@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class EX07 extends Thread
 {
     String getThreadName;
@@ -21,7 +21,7 @@ class EX07 extends Thread
         }
         catch(InterruptedException e)
         {
-             System.out.println("¤¤Â_¨Ò¥~");
+             System.out.println("ä¸­æ–·ä¾‹å¤–");
         }
     }
 }
@@ -31,14 +31,14 @@ public class EX07_Priority
 {
 	public static void main(String args[])
 	{    
-        EX07 mt1 = new EX07("°õ¦æºü1");
-        EX07 mt2 = new EX07("°õ¦æºü2");
-        EX07 mt3 = new EX07("°õ¦æºü3");
+        EX07 mt1 = new EX07("åŸ·è¡Œç·’1");
+        EX07 mt2 = new EX07("åŸ·è¡Œç·’2");
+        EX07 mt3 = new EX07("åŸ·è¡Œç·’3");
         
 		mt1.setPriority(1);
         mt2.setPriority(10);
         
-        System.out.println("¶}©l-\n");
+        System.out.println("é–‹å§‹-\n");
         mt1.start();
 		mt2.start();
 		mt3.start();

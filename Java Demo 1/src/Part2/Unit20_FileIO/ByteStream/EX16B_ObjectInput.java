@@ -14,7 +14,7 @@ public class EX16B_ObjectInput
 			
 			System.out.println("My name is " + s2.getName());
 			
-			//s2.printData();
+			s2.printData();
 		
 			obj.close();
 		}

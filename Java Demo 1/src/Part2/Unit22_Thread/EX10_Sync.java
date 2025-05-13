@@ -1,12 +1,12 @@
-
+package Part2.Unit22_Thread;
 class CBank
 {
     private static int sum=0;
     
     public static void add(int n) 
     {
-        synchronized(Object.class)
-        //synchronized(new Object())
+        // synchronized(Object.class)
+        synchronized(new Object())
         {
             int tmp=sum;
             tmp=tmp+n;
@@ -29,7 +29,7 @@ class CCustomer extends Thread
     {
        for(int i=1;i<=3;i++)
        {
-          CBank.add(100);      //¶×¤J3¦¸,¨C¦¸100¤¸
+          CBank.add(100);      //åŒ¯å…¥3æ¬¡,æ¯æ¬¡100å…ƒ
        }
     }
 }
@@ -43,7 +43,7 @@ public class EX10_Sync
        CCustomer c2=new CCustomer();
        CCustomer c3=new CCustomer();
       
-       System.out.println("¶}©l-\n");
+       System.out.println("é–‹å§‹-\n");
        c1.start();
        c2.start();
        c3.start();

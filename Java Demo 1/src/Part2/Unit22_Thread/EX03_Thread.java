@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class MyThread1 extends Thread
 {
 	public void run()
@@ -40,15 +40,20 @@ public class EX03_Thread
         MyThread1 mt2 =new MyThread1();
         MyThread2 mt3 =new MyThread2();
         MyThread2 mt4 =new MyThread2();
+
+        mt1.setName("1_1");
+        mt2.setName("1_2");
+        mt3.setName("2_1");
+        mt4.setName("2_2");
         
-        System.out.println("¶}©l-\n");
+        System.out.println("é–‹å§‹-\n");
         mt1.start();
         mt2.start();
         mt3.start();
         mt4.start();
         for(int i=1;i<=10;i++)
         {
-            System.out.printf("Main Thread: %2d ¥Ø«eThread­Ó¼Æ: %d",i,Thread.activeCount());
+            System.out.printf("Main Thread: %2d ç›®å‰Threadå€‹æ•¸: %d",i,Thread.activeCount());
             System.out.println("\n");
             Thread.sleep(500);
         }

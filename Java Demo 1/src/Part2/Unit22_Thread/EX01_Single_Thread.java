@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class EX01 
 {
    private String id;
@@ -29,7 +29,7 @@ public class EX01_Single_Thread
       EX01 cat=new EX01("kitty");
       EX01 bear=new EX01("pooh");
       
-      System.out.println("¶}©l -\n");
+      System.out.println("é–‹å§‹ -\n");
       dog.run();
       cat.run();
       bear.run();

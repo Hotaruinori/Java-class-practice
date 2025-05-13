@@ -1,16 +1,16 @@
-
+package Part2.Unit22_Thread;
 class CBank
 {
     private static int sum=0;
     
-    public static void add(int n)
-    //public synchronized static void add(int n) 
+    // public static void add(int n)
+    public synchronized static void add(int n) 
     {
         int tmp=sum;
-        tmp=tmp+n;   //²Ö¥[¶×´ÚÁ`ÃB
+        tmp=tmp+n;   //ç´¯åŠ åŒ¯æ¬¾ç¸½é¡
         try
         {
-            Thread.sleep((int)(1000*Math.random()));  //¼È°±0~1¬íÄÁ
+            Thread.sleep((int)(1000*Math.random()));  //æš«åœ0~1ç§’é˜
         }
         catch(InterruptedException e){}
          
@@ -25,7 +25,7 @@ class CCustomer extends Thread
     public void run()
     {
         for(int i=1;i<=3;i++)
-            CBank.add(100);      //¶×¤J3¦¸,¨C¦¸100¤¸
+            CBank.add(100);      //åŒ¯å…¥3æ¬¡,æ¯æ¬¡100å…ƒ
     }
 }
 
@@ -38,7 +38,7 @@ public class EX09_Sync
         CCustomer c2=new CCustomer();
         CCustomer c3=new CCustomer();
         
-        System.out.println("¶}©l-\n");
+        System.out.println("é–‹å§‹-\n");
         c1.start();
         c2.start();
         c3.start();

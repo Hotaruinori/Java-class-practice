@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class EX08 extends Thread
 {
     private String id;
@@ -32,9 +32,9 @@ public class EX08_Join
         EX08 cat=new EX08("kitty");
         EX08 bear=new EX08("pooh");
       
-        System.out.println("¶}©l -\n");
+        System.out.println("é–‹å§‹ -\n");
         dog.start(); 
-        dog.join(); 
+        dog.join(1000); 
         cat.start();
         bear.start();
       

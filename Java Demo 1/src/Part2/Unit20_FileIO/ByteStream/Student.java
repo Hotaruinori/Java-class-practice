@@ -1,13 +1,13 @@
 package Part2.Unit20_FileIO.ByteStream;
 import java.io.*;
-
+// implements Serializable
 public class Student implements Serializable
 {
 	private String name;
 	private int chinese;
 	private int english;
-    //private int math;
-    private transient int math;
+    private int math;
+    // private transient int math;
     
     public Student(String name, int chinese, int english, int math)
 	{

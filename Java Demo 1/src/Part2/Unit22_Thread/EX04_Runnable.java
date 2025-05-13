@@ -1,4 +1,4 @@
-
+package Part2.Unit22_Thread;
 class Base{ }
   
 class MyThreadA extends Base implements Runnable
@@ -43,20 +43,20 @@ public class EX04_Runnable
         MyThreadB obj3 = new MyThreadB();
         MyThreadB obj4 = new MyThreadB();
         
-        //Thread ª«¥ó¦WºÙ = new Thread(Runnableª«¥ó [,¼ĞÃD¤º®e]);
+        //Thread ç‰©ä»¶åç¨± = new Thread(Runnableç‰©ä»¶ [,æ¨™é¡Œå…§å®¹]);
         Thread mt1 = new Thread(obj1);
         Thread mt2 = new Thread(obj2);
         Thread mt3 = new Thread(obj3);
         Thread mt4 = new Thread(obj4);
         
-        System.out.println("¶}©l-\n");
+        System.out.println("é–‹å§‹-\n");
         mt1.start();
         mt2.start();
         mt3.start();
         mt4.start();
         for(int i=1;i<=10;i++)
         {
-            System.out.printf("Main Thread: %2d ¥Ø«eThread­Ó¼Æ: %d",i,Thread.activeCount());
+            System.out.printf("Main Thread: %2d ç›®å‰Threadå€‹æ•¸: %d",i,Thread.activeCount());
             System.out.println("\n");
             Thread.sleep(500);
         }
