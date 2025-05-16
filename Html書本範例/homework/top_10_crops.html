@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh" style="height: 100%;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>台灣農業與肥料市場介紹</title>
+        <style>
+        * {
+            /* border-box 不用手動計算 padding 和 border 對寬高的影響 */
+            box-sizing: border-box; 
+            letter-spacing: 1px;
+            word-spacing: 1.5px;
+            margin: 0;
+        }
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto; /* 置中 */
+            background-color: #f5f7fa;
+            color: #333 /* 主要文字顏色 */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* 圖片置中 */
+            border-radius: 10px; /* 圖片圓角 */
+            box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.1); /* 圖片陰影 */
+        }
+        li {
+            line-height: 1.5rem;
+            list-style-type: square;
+            margin-bottom: 8px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: calc(100vh - 120px); 
+            /* 確保元素高度至少填滿「視窗高度扣除 120px 的空間」vh 是視窗（Viewport）高度單位，100vh 表示當前視窗高度的 100%。 */
+        }
+        .side_link{
+            width: 30%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+        }
+        .main_article{
+            width: 70%;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 10px;
+        }
+        header {
+            background: linear-gradient(to right, #3a7bd5, #00d2ff); /* 藍色漸層標頭 */
+            width: 100%;
+            color: white;
+            box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            text-align: right;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        ol {
+            height: 50rem; /* 盡量填滿高度 */
+            background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.05);
+        }
+        ol li {
+            list-style-type: none;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            background-color: rgba(255,255,255,0.7);
+            border-left: 4px solid #3a7bd5; /* 左側裝飾線 */
+            transition: all 0.3s;
+        }
+        ol li:hover {
+            background-color: #f1f5f9;
+            transform: translateX(10px);
+        }
+        h1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+        }
+        h2 {
+            margin: 0 0 15px 0;
+            padding: 10px;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            border-radius: 4px;
+            font-size: 1.3rem;
+        }
+        nav {
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 0;
+        }
+        nav ul {
+            background-color: transparent;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>台灣農業與肥料市場介紹</h1>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>整體</a></li>
+                    <li><a href='Changes_in_cultivated_area.html'>耕地變化</a></li>
+                    <li><a href='top_10_crops.html'>農作物占比</a></li>
+                    <li><a href='agricultural regions.html'>作物分佈</a></li>
+                    <li><a href='Annual_consumption.html'>化肥年度統計</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <article class="main_article">
+                <h2>充滿多樣性與複雜性的小島</h2>
+                <ul>
+                    <li><a>台灣的農業作物主要可分為：糧食作物、蔬菜、水果、經濟作物共四大類。以下根據近年數據進行分析(以產值做統計)</a></li>
+                    <li><a>單一作物水稻占比為最大宗，主要產於中南部（彰化、雲林、嘉義）及東部（花蓮、台東）。因政府保價收購與休耕政策，面積雖減少，但仍是主糧</a></li>
+                    <li><a>蔬菜種類多元，包含小葉菜類、包葉菜類、根莖類等</a></li>
+                    <li><a>水果種類包含溫帶水果(梨、桃、蘋果等)與熱帶水果(芒果、蓮霧、香蕉等)，另外柑橘也是大宗</a></li>
+                    <li><a>經濟作物包含茶葉、花卉(蝴蝶蘭、菊花)等，甘蔗因糖業沒落佔比較少</a></li>
+                    <img src="top_10_crops.png" alt="台灣農業區域圖">
+                </ul>
+            </article>
+            <aside class="side_link">
+                <h2>資材觀念</h2>
+                <ol>
+                    <li><a href="#">土壤</a></li>
+                    <li><a href="#">合理化施肥</a></li>
+                    <li><a href="#">作物生理與營養</a></li>
+                    <li><a href="#">待更新</a></li>
+                </ol>
+            </aside>
+        </div>
+        <footer>
+            測試 版權所有
+        </footer>
+    </body>
+</html>
