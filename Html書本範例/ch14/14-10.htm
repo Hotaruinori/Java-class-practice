@@ -18,7 +18,15 @@
 			$('#box').fadeIn('slow');
 		});
 		$('#btnFadeto').click(function(){
-			$('#box').fadeTo('slow', 0.5);
+			if( $('#box').attr('value'=='透明')){
+				$('#box').attr('value','不透明');
+				$('#box').fadeTo('slow', 1);
+			}
+			else{
+				$('#box').attr('value','透明');
+				$('#box').fadeTo('slow', 0);
+			}
+			
 		});
 		$('#btnFadeToggle').click(function(){
 			$('#box').fadeToggle('slow');

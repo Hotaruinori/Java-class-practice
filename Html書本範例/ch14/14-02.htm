@@ -12,15 +12,27 @@
 	<script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
 	<script>
 	$(document).ready(function(){	
-		alert('Change Color!');
-		$('#box').toggleClass('highlight');
-		alert('Change Color!');
-		$('#box').toggleClass('highlight');
+		$('#buttonExcute').click(function(){
+		// 	$('#box').toggleClass('highlight');
+
+		if ($('#box').hasClass('highlight')) {
+			$('#box').removeClass('highlight');
+		}
+		else {
+			$('#box').addClass('highlight');
+		}});
+		// 以下無法測試
+		// alert('Change Color!'
+		// 以下原範例無法測試
+		// alert('Change Color!');
+		// $('#box').toggleClass('highlight');
+		// alert('Change Color!');
+		// $('#box').toggleClass('highlight');
 	});
 	</script>
 </head>
 
 <body>
-<div id="box">Box</div>
+<div id="box">Box</div><button id="buttonExcute">Change Color!</button>
 </body>
 </html>

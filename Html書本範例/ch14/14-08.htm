@@ -12,13 +12,13 @@
 	<script>
 	$(document).ready(function(){	
 		$('#btnShow').click(function(){
-			$('#box').show(500);
+			$('#box').show('fast');
 		});
 		$('#btnHide').click(function(){
 			$('#box').hide(500);
 		});
 		$('#btnToggle').click(function(){
-			$('#box').toggle(500);
+			$('#box').toggle(1000);
 		});	
 	});
 	</script>
@@ -26,9 +26,9 @@
 
 <body>
 <p>
-  <input type="button" name="btnShow" id="btnShow" value="顯示">
-  <input type="button" name="btnHide" id="btnHide" value="隱藏">
-  <input type="button" name="btnToggle" id="btnToggle" value="切換">
+  <input type="button" id="btnShow" value="顯示">
+  <input type="button" id="btnHide" value="隱藏">
+  <input type="button" id="btnToggle" value="切換">
 </p>
 <p>&nbsp; </p>
 <div id="box">Box</div>

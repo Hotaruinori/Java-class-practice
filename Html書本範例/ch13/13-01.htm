@@ -3,11 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>範例</title>
-	<script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>  -->
+	<script src="jquery-3.7.1.slim.min.js"></script>
 	<script>
+		// $ 與()為jQuery的變數，用來呼叫jQ的函式，操作jQuery的完整語法
 		$(document).ready(function(){
 		 	alert("Hello, jQuery!");
 		})
+		// 簡化語法，document是最常用物件，alert是最常用事件
+		$(function(){
+			alert("Hello, jQuery!2");
+		});
+		// 先出來，純javascript語法
+		alert("Hello, jQuery!3")
 	</script>
 </head>
 

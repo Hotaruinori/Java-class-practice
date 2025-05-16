@@ -11,6 +11,9 @@
 	<script>
 	$(document).ready(function(){
 		$("div a").css("text-decoration","none");
+		// $("div>a").css("text-decoration","none");
+		// 此時點比行內樣式還晚
+		$('ul').css("list-style-type", "square");  
 	});
 	</script>
 </head>

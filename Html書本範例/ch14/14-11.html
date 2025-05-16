@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- https://animate.style/ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+      <script>
+        $(document).ready(function(){
+        //    animate__heartBeat
+        // $('img').addClass("animate__animated animate__heartBeat")
+            $('img').hover(
+                function(){
+                    $(this).addClass("animate__animated animate__heartBeat")
+                },
+                function(){
+                    $(this).removeClass("animate__animated animate__heartBeat")
+                }
+            )
+        });
+
+
+      </script>
+</head>
+<body>
+    <!-- animate__rubberBand -->
+    <div>
+    <h1 class="animate__animated animate__rubberBand" >Animate__animated animate__rubberBand</h1>
+    </div>
+    <img src="ACL041000.png" alt="pic">
+    </div>
+</body>
+</html>

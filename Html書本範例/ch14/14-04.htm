@@ -16,14 +16,38 @@
 		$('#sList').prepend('<li>HTML5</li>');
 		$('#sList').append('<li>jQuery</li>');
 		$('#sList').after('<p>歡迎一起來學習!</p>');
+	
+	$('#buttonDelete').click(function(){
+		$('div').remove();
+	});
+	$('#buttonEmpty').click(function(){
+		$('div').empty();
+	});
+	$('#buttonReplace').click(function(){
+		$('div').replaceWith('<div style="background-color: green; height: 50px;">這是取代後的內容</div>');
+	});
+	$('#buttonAdd').click(function(){
+		$('#buttonAdd').after('<div style="background-color: aqua; height: 50px;">這是新增後的內容</div>');
+	});
+
+
+
+
 	});
 	</script>
 </head>
 
 <body>
-<ul id="sList">
+<ul id="sList">==========
   <li>CSS3</li>
   <li>JavaScript</li>
 </ul>
+<button id="buttonDelete">全刪除</button>
+<button id="buttonEmpty">清空</button>
+<button id="buttonReplace">取代</button>
+<button id="buttonAdd">新增</button>
+<div style="background-color: aqua; height: 50px;">
+	test
+</div>
 </body>
 </html>
