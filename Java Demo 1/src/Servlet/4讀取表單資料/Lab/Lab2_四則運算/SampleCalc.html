@@ -1,0 +1,44 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>表單與Servlet</title>
+    <style>
+	  legend {
+	    font-size:24px;
+		color:#0000ff;
+	  }
+	  
+	  fieldset {
+	    border-width:3px;
+		border-color:#ff00ff;
+		width:8cm;
+	  }
+	</style>	
+  </head>
+
+  <body bgcolor="yellow"> 
+
+	<fieldset>
+	  <legend>選取運算方式</legend>
+	  <form name="myform" method="get" action="/Lab2/doCalc">
+		數值1：<input type="text" name="number1" size="5"><p>
+		數值2：<input type="text" name="number2" size="5"><p>
+		運算符號：
+	    <select name="operator" size=1>
+		  <option value="nul">請選擇</option>
+		  <option value="add">加</option>
+		  <option value="sub">減</option>
+		  <option value="mul">乘</option>
+		  <option value="div">除</option>
+		</select>
+		<p>
+	    <input type="submit" value="傳送">
+	    <input type="reset" value="重填">
+		
+	  </form>
+	</fieldset>
+	
+  </body>
+  
+</html>

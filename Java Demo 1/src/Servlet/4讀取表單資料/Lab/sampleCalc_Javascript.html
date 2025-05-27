@@ -1,0 +1,73 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>表單與Servlet</title>
+    <style>
+	  legend {
+	    font-size:24px;
+		color:#0000ff;
+	  }
+	  
+	  fieldset {
+	    border-width:3px;
+		border-color:#ff00ff;
+		width:8cm;
+	  }
+	</style>
+	
+	<script langeage='javascript'>	
+	  function checkNum(element)
+	  {
+	    if( document.getElementById("num1").value == "")
+        {
+          alert( "請輸入數值1" );
+          element.number1.focus() ;
+          return false;
+        }
+
+	    if( element.number2.value == "")
+        {
+          alert( "請輸入數值2" );
+          element.number2.focus() ;
+          return false;
+        }	
+		
+		if(element.operator.value=='nul')
+        {
+          alert( "請選取運算方式" );
+          element.operator.focus() ;
+          return false;
+        }
+		
+		document.myform.submit();
+	  }
+	  
+	</script>
+	
+  </head>
+
+  <body bgcolor="yellow"> 
+	<fieldset>
+	  <legend>選取運算方式</legend>
+	  <form name="myform" method="get" action="http://localhost:8080/xxxxx/doCalc">
+		數值1：<input type="text" name="number1" id="num1" size="5"><p>
+		數值2：<input type="text" name="number2" id="num2"size="5"><p>
+		運算符號：
+	    <select name="operator" size=1>
+		  <option value="nul">請選擇</option>
+		  <option value="add">加</option>
+		  <option value="sub">減</option>
+		  <option value="mul">乘</option>
+		  <option value="div">除</option>
+		</select>
+		<p>
+	    <input type="button" value="傳送" onClick="checkNum(this.form);">
+	    <input type="reset" value="重填">
+		
+	  </form>
+	</fieldset>
+	
+  </body>
+ 
+</html>
