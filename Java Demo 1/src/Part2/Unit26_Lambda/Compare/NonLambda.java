@@ -1,4 +1,4 @@
-
+package Part2.Unit26_Lambda.Compare;
 public class NonLambda 
 {
     public static void main(String[] args) 

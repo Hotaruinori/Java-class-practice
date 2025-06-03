@@ -1,4 +1,5 @@
-// ¿é¥X Map
+// è¼¸å‡º Map
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map07
@@ -13,8 +14,8 @@ public class Map07
         map.put("key5", "Anna");
         map.put("key6", "Diana");
         
-        //¤è¦¡1¡G    
-        System.out.println("¥H Mapª«¥ó.keySet ¨ú±o key©Mvalue¡G");    
+        //æ–¹å¼1ï¼š    
+        System.out.println("ä»¥ Mapç‰©ä»¶.keySet å–å¾— keyå’Œvalueï¼š");    
         for(String key : map.keySet()) 
         {    
             System.out.println("key= "+ key + " and value= " + map.get(key));    
@@ -22,8 +23,8 @@ public class Map07
         System.out.println();
         
         
-        //¤è¦¡2    
-        System.out.println("¥H Mapª«¥ó.entrySet ¨Ï¥Î iterator ¨ú±o key©Mvalue¡G");
+        //æ–¹å¼2    
+        System.out.println("ä»¥ Mapç‰©ä»¶.entrySet ä½¿ç”¨ iterator å–å¾— keyå’Œvalueï¼š");
         Set<Map.Entry<String, String>> set =  map.entrySet();        
         Iterator<Map.Entry<String, String>> it = set.iterator();
         
@@ -37,8 +38,8 @@ public class Map07
         System.out.println();    
       
         
-        //¤è¦¡3¡G    
-        System.out.println("¥H Mapª«¥ó.entrySet ¨ú±o key©Mvalue");  
+        //æ–¹å¼3ï¼š    
+        System.out.println("ä»¥ Mapç‰©ä»¶.entrySet å–å¾— keyå’Œvalue");  
         for(Map.Entry<String, String> entry : map.entrySet()) 
         {    
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());    
@@ -46,8 +47,8 @@ public class Map07
         System.out.println();
         
         
-        //¤è¦¡4    
-        System.out.println("¥H Mapª«¥ó.values() ¨ú±o ©Ò¦³ªºvalue¡A¦ı¤£¯à¨ú±o key");    
+        //æ–¹å¼4    
+        System.out.println("ä»¥ Mapç‰©ä»¶.values() å–å¾— æ‰€æœ‰çš„valueï¼Œä½†ä¸èƒ½å–å¾— key");    
         for(String v : map.values()) 
         {    
             System.out.println("value= " + v);    

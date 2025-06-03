@@ -10,15 +10,15 @@ public class Count_Word {
         Scanner input=new Scanner(file);
         Set songset=new TreeSet();
         String word;
-        List songlist = new ArrayList<>();
+        List<String> songlist = new ArrayList<>();
 		while (input.hasNext()) {
-            word = input.next();
-            if (word.contains(",")) {
-               word = word.replace(",", ""); 
-            }
-            if (word.contains(".")) {
-               word = word.replace(".", "");
-            }
+            word = input.next().replaceAll("[^A-Za-z]", "");
+            // if (word.contains(",")) {
+            //    word = word.replace(",", ""); 
+            // }
+            // if (word.contains(".")) {
+            //    word = word.replace(".", "");
+            // }
             songlist.add(word);
             songset.add(word);
         }

@@ -1,4 +1,4 @@
-
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map04
@@ -12,7 +12,7 @@ public class Map04
         map.put(4,"Jojo");
         map.put(5,"Anna");
 		
-	    Set<Integer> set = map.keySet();  //±Nkey¦s¤JSet®e¾¹
+	    Set<Integer> set = map.keySet();  //å°‡keyå­˜å…¥Setå®¹å™¨
 	    
 	    for(Integer s : set)
 	    {

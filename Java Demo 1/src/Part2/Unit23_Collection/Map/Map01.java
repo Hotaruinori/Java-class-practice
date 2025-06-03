@@ -1,4 +1,4 @@
-
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map01
@@ -11,7 +11,7 @@ public class Map01
 		map.put(new Integer(3), "Nana");
 		map.put(new Integer(1), "jojo");
 		
-        System.out.println("¥ş³¡¶°¦X¤¸¯À:");
+        System.out.println("å…¨éƒ¨é›†åˆå…ƒç´ :");
 		System.out.println(map);
 	}
 }

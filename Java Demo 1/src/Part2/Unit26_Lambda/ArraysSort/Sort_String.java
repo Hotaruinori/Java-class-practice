@@ -1,5 +1,6 @@
-/*¨Ì¦r¦êªø«×±Æ§Ç
-  ¦Û­qComparatorª«¥ó*/
+package Part2.Unit26_Lambda.ArraysSort;
+/*ä¾å­—ä¸²é•·åº¦æ’åº
+  è‡ªè¨‚Comparatorç‰©ä»¶*/
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,9 +9,9 @@ public class Sort_String
 { 
   	public static void main(String[] args) 
   	{
-  		System.out.println("String±Æ§Ç");
+  		System.out.println("Stringæ’åº");
     	String[] names = { "Oscar", "Charlie", "Ryan", "Ted", "David" };
-    	System.out.print("±Æ§Ç«e:");
+    	System.out.print("æ’åºå‰:");
     	for(String element : names)
     	{
       		System.out.print(element + "\t");
@@ -19,7 +20,7 @@ public class Sort_String
       
     	Arrays.sort(names, new MyComparator());
 
-    	System.out.print("±Æ§Ç«á:");
+    	System.out.print("æ’åºå¾Œ:");
     	for (String element : names) System.out.print(element + "\t");
 
    		System.out.println("\n");  

@@ -1,4 +1,4 @@
-
+package Part2.Unit26_Lambda.ArraysSort.Lab;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -8,12 +8,13 @@ public class Lab_StringSort_Lambda_Char2
     {
         String[] names = {"Oscar", "Charlie", "Ryan","Ted", "David" };
         
-        //¨Ì²Ä¤G­Ó¦r¤¸¤j¤p±Æ§Ç¡A¨Ï¥ÎLambda»yªk
+        //ä¾ç¬¬äºŒå€‹å­—å…ƒå¤§å°æ’åºï¼Œä½¿ç”¨Lambdaèªæ³•
         //Insert code to here
-        
+        Arrays.sort(names, (x, y) -> ((String)x).charAt(1) - ((String)y).charAt(1));
 
         
-        System.out.println("±Æ§Çµ²ªG:");
+        System.out.println("æ’åºçµæœ:");
         //Insert code to here
+        System.out.println(Arrays.toString(names));
     }
 }

@@ -1,5 +1,6 @@
-/*¨Ì¦r¦ê²Ä2­Ó¦r¤¸±Æ§Ç
-  ¦Û­qComparatorª«¥ó*/
+package Part2.Unit26_Lambda.ArraysSort.Lab;
+/*ä¾å­—ä¸²ç¬¬2å€‹å­—å…ƒæ’åº
+  è‡ªè¨‚Comparatorç‰©ä»¶*/
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,17 +9,17 @@ public class Lab_StringSort_Char2
 { 
   	public static void main(String[] args) 
   	{
-  		System.out.println("String±Æ§Ç");
+  		System.out.println("Stringæ’åº");
     	String[] arrayToSort = { "Oscar", "Charlie", "Ryan", "Ted", "David" };
     	
-    	System.out.print("±Æ§Ç«e:");
+    	System.out.print("æ’åºå‰:");
     	for (String element : arrayToSort) System.out.print(element + "\t");
     	
     	System.out.println("\n");
       
     	Arrays.sort(arrayToSort, new MyComparator());
 
-    	System.out.print("±Æ§Ç«á:");
+    	System.out.print("æ’åºå¾Œ:");
     	for (String element : arrayToSort) System.out.print(element + "\t");
 
     	System.out.println("\n");  
@@ -30,6 +31,7 @@ class MyComparator implements Comparator
   	public int compare(Object f, Object s) 
   	{
       	// Insert code to here
+		return ((String) f).charAt(1) - ((String) s).charAt(1);
 
   	}
 }

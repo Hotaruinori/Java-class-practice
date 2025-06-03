@@ -1,11 +1,11 @@
-
-//Arrays.sort¡A¥H¤ÎComparator¤¶­±ªº¥Îªk
+package Part2.Unit26_Lambda.ArraysSort;
+//Arrays.sortï¼Œä»¥åŠComparatorä»‹é¢çš„ç”¨æ³•
 /*
-    jdk´£¨ÑArrays.sort±Æ§Ç¤èªk
+    jdkæä¾›Arrays.sortæ’åºæ–¹æ³•
     
-    Arrays.sort(Ãş§O«¬°}¦C) ¥Ñ¤p¨ì¤j
-¡@¡@Arrays.sort(Ãş§O«¬°}¦C, Comparatorª«¥ó)
-    Collections.reverseOrder() Comparatorª«¥ó¥Ñ¤j¨ì¤p
+    Arrays.sort(é¡åˆ¥å‹é™£åˆ—) ç”±å°åˆ°å¤§
+ã€€ã€€Arrays.sort(é¡åˆ¥å‹é™£åˆ—, Comparatorç‰©ä»¶)
+    Collections.reverseOrder() Comparatorç‰©ä»¶ç”±å¤§åˆ°å°
 */
 
 import java.util.Arrays;
@@ -16,19 +16,20 @@ public class Sort_Integer
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("Integer±Æ§Ç");
+		System.out.println("Integeræ’åº");
     	Integer[] arrayToSort = new Integer[] { 48, 5, 89, 80, 81, 23, 45, 16, 2 };
     
-    	System.out.print("±Æ§Ç«e:");
+    	System.out.print("æ’åºå‰:");
     	for(int i = 0; i < arrayToSort.length; i++)
     	{
       		System.out.print(arrayToSort[i] + "\t");
     	}  
     	System.out.println("\n");
     	
-    	Arrays.sort(arrayToSort); //¥Ñ¤p¨ì¤j
+    	// Arrays.sort(arrayToSort); //ç”±å°åˆ°å¤§
+		Arrays.sort(arrayToSort, Collections.reverseOrder()); //ç”±å¤§åˆ°å°
     	    
-    	System.out.print("±Æ§Ç«á:");
+    	System.out.print("æ’åºå¾Œ:");
         for(int element : arrayToSort) System.out.print(element + "\t");
     	System.out.println("\n"); 
 	} 

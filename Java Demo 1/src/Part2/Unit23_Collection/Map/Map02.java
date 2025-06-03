@@ -1,4 +1,4 @@
-
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map02
@@ -12,14 +12,14 @@ public class Map02
 		ht.put("FOUR",4);
 		ht.put("FIVE",new Integer(5));
 		
-		//¥Hkey­È±N«ü©w¤¸¯À¨ú¥X
-        System.out.println("¥Hkey­È±N«ü©w¤¸¯À¨ú¥X");
+		//ä»¥keyå€¼å°‡æŒ‡å®šå…ƒç´ å–å‡º
+        System.out.println("ä»¥keyå€¼å°‡æŒ‡å®šå…ƒç´ å–å‡º");
 		System.out.println("key=TWO:" + ht.get("TWO"));
 		System.out.println("key=THREE:" + ht.get("THREE"));
 		System.out.println("key=SIX:" + ht.get("SIX"));
 		System.out.println();
 		
-        System.out.println("Åã¥Ü¶°¦X¤¤©Ò¦³¤¸¯À¤º®e:"+ ht);
+        System.out.println("é¡¯ç¤ºé›†åˆä¸­æ‰€æœ‰å…ƒç´ å…§å®¹:"+ ht);
         
     }
 }

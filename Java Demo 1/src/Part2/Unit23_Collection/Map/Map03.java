@@ -1,4 +1,4 @@
-
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map03
@@ -13,8 +13,8 @@ public class Map03
 		ht.put("FOUR","Jojo");
 		ht.put("FIVE","Anna");
 		
-        //¥HEnumeration­È±N¶°¦X¤¤©Ò¦³¤¸¯À¤º®e¨ú¥X¡C¶È¾A¥ÎHashtable
-        System.out.println("¥HEnumeration­È±N¶°¦X¤¤©Ò¦³¤¸¯À¤º®e¨ú¥X");
+        //ä»¥Enumerationå€¼å°‡é›†åˆä¸­æ‰€æœ‰å…ƒç´ å…§å®¹å–å‡ºã€‚åƒ…é©ç”¨Hashtableï¼ŒHashMapä¸é©ç”¨ã€‚
+        System.out.println("ä»¥Enumerationå€¼å°‡é›†åˆä¸­æ‰€æœ‰å…ƒç´ å…§å®¹å–å‡º");
         
         Enumeration e = ht.elements();    
         while(e.hasMoreElements())
@@ -23,7 +23,7 @@ public class Map03
         } 
  
         System.out.println();
-        
+        //æ³¨æ„æ˜¯ä¸€èˆ¬çš„forè¿´åœˆ
 		for(Enumeration ee = ht.elements();ee.hasMoreElements();)
 		{
 			System.out.println(ee.nextElement());

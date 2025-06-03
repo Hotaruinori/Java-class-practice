@@ -1,4 +1,4 @@
-
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map06
@@ -13,7 +13,7 @@ public class Map06
         map.put(5,"Anna");
 		
         System.out.println(map);
-        System.out.println(map.containsKey(2));  //¬d¸ß key
+        System.out.println(map.containsKey(2));  //æŸ¥è©¢ key
         System.out.println(map.containsKey(6));
         System.out.println();
         
@@ -27,7 +27,7 @@ public class Map06
         {
             if(entry.getValue().toLowerCase().contains(name.toLowerCase())) 
             {
-                System.out.println("\n¬d¸ß¨ì¸Ó¸ê®Æ:");
+                System.out.println("\næŸ¥è©¢åˆ°è©²è³‡æ–™:");
                 System.out.println(entry.getKey()+ ":" + entry.getValue());
             }
         }

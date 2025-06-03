@@ -1,5 +1,5 @@
-//Map.Entry�����k
-
+//Map.Entry物件方法
+package Part2.Unit23_Collection.Map;
 import java.util.*;
 
 public class Map05
@@ -12,7 +12,7 @@ public class Map05
         map.put(3,"Nana");
         map.put(4,"Jojo");
         map.put(5,"Anna");
-		
+		//把map物件轉換為Set，Entry物件的集合
         Set<Map.Entry<Integer,String>> set=map.entrySet();
         
         for(Map.Entry<Integer,String> entry : set)
