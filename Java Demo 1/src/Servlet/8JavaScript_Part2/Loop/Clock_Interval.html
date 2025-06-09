@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>text</title> 
+    <script>
+	  //數字時鐘另一種寫法      
+      function show()
+      {
+        digital=new Date()
+        hours=digital.getHours()
+        minutes=digital.getMinutes()
+        seconds=digital.getSeconds()
+
+        if(minutes<=9)
+        {
+          minutes="0"+minutes
+        }
+        if(seconds<=9)
+        {
+          seconds="0"+seconds
+        }
+        //寫入文字方塊
+        document.tick.clock.value=hours+":"+minutes+":"+seconds
+      }
+    </script>
+	<style>
+	  .mysize{
+	    font-size:36px;
+		background-color:yellow;
+		color:#f00;
+	  }  
+	</style>
+  </head>
+   
+  <body onload="setInterval('show()',1000)"> 
+    <center>
+    <form name="tick">
+      <input type="text" size="4" name="clock" class="mysize">
+    </form> 
+	</center>
+  </body>
+</html>
+ 
