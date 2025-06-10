@@ -3,7 +3,23 @@
     <meta charset="utf-8">
     <title>文字跑馬燈</title>
 	<script language="JavaScript">
-		
+  var currentIndex = 0;
+  var myboard = "歡迎光臨旅遊資訊網!                      ";
+  var isRunning = true;
+  function on() {
+      isRunning = true;
+      myLED_board();
+  }
+  function off() {
+      isRunning = false;
+  }
+  function myLED_board() {
+      if (!isRunning) return;
+      var displayText = myboard.substring(currentIndex) + myboard.substring(0, currentIndex);
+      document.getElementsByName("myname")[0].value = displayText;
+      currentIndex = (currentIndex + 1) % myboard.length;
+      setTimeout(myLED_board, 300); 
+  }
 	</script>
 	<style>
 	  .ss{
@@ -14,9 +30,9 @@
 	</style>
 	
   </head>
-  <body>
+  <body onload='myLED_board()'>
     <form name="myform">
-      <input class="ss" type="text" name="myname" size="27" value="歡迎光臨旅遊資訊網!　　　　　"><p>
+      <input class="ss" type="text" name="myname" size="27" value="歡迎光臨旅遊資訊網$$$$$!　　　　　"><p>
       <input type="button" value="開始" onclick="on()"> 
 	  <input type="button" value="暫停" onclick="off()"> 
     </form>

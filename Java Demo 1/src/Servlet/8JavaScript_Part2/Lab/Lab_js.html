@@ -8,7 +8,8 @@
       var digital = new Date();
       //要轉字串才能用charAT
       var hh = digital.getHours().toString().padStart(2, "0");
-      var mm = digital.getMinutes().toString().padStart(2, "0");
+      var mm = ("0"+digital.getMinutes());
+      mm = mm.substring(mm.length-2,2);
       var ss=digital.getSeconds()
       ss = (ss<=9) ? ("0"+ss).toString() : ss.toString();
       // 好像下面三種都可以....
