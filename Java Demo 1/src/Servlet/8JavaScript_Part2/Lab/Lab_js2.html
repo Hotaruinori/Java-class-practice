@@ -7,11 +7,17 @@
   var myboard = "歡迎光臨旅遊資訊網!                      ";
   var isRunning = true;
   function on() {
-      isRunning = true;
-      myLED_board();
+    isRunning = true;
+    myLED_board();
+    //disable按鈕
+    document.getElementsByName("btn_on")[0].disabled = true;
+    document.getElementsByName("btn_off")[0].disabled = false;
   }
   function off() {
-      isRunning = false;
+    isRunning = false;
+    //disable按鈕
+    document.getElementsByName("btn_off")[0].disabled = true;
+    document.getElementsByName("btn_on")[0].disabled = false;
   }
   function myLED_board() {
       if (!isRunning) return;
@@ -33,8 +39,8 @@
   <body onload='myLED_board()'>
     <form name="myform">
       <input class="ss" type="text" name="myname" size="27" value="歡迎光臨旅遊資訊網$$$$$!　　　　　"><p>
-      <input type="button" value="開始" onclick="on()"> 
-	  <input type="button" value="暫停" onclick="off()"> 
+      <input type="button" value="開始" name="btn_on" onclick="on()"> 
+	  <input type="button" value="暫停" name="btn_off" onclick="off()"> 
     </form>
  
   </body>
