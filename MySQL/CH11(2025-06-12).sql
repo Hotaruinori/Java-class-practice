@@ -93,14 +93,22 @@ select * from information_schema.views where table_schema = 'cmdev';
 
 
 
+-- 練習1 使用「USE」敘述切換到「mylab」資料庫。參考下面的畫面,使用「CREATEVIEW」敘述,
+-- 建立一個包含下列輸出的 View 元件,名稱為「PetEvent」:
+use mylab;
+create or replace view PetEvent as
+	select P.id, name, owner, species, edate, etype from pet P, event E 
+    where P.id = E.id;
 
+-- 練習2 查詢「PetEvent」View 元件,確認上一個練習建立的 View 元件是否正確。
+select P.id, name, owner, species, etype, gender, birth from pet P, event E 
+    where P.id = E.id;
 
-
-
-
-
-
-
+-- 練習3 使用「CREATE OR REPLACE VIEW」敘述,修改「PetEvent」View 元件,加入「gender」與「birth」欄位。
+-- 查詢「PetEvent」View 元件,確認上一個練習修改後的 View 元件是否正確。
+create or replace view PetEvent as
+	select P.id, name, owner, species, etype, gender, birth from pet P, event E 
+		where P.id = E.id;
 
 
 
