@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>變更文字顏色</title>
+	<script>
+      function change_color()
+	  {
+        var string=document.getElementById("StringFont").innerText;
+        document.getElementById("StringFont").innerHTML='<font color="red">'+string+'</font>';
+      }
+    </script>
+  </head>
+  
+  <body>
+    <p id="StringFont" style="font-size:1cm">將文字變為紅色</p>
+	<form>
+      <input type="button" value="變更文字顏色" onclick="change_color()">
+	</form>
+  </body>	
+</html>

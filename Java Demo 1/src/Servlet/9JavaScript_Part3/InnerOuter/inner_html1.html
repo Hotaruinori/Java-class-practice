@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>更換文字</title>
+    <style>	  
+	  label, span {
+	    font-size:24px;
+		color:#f00;
+	  }
+	</style>
+	<script>
+	  function change_text()
+	  {	
+        alert(document.getElementById('result').innerText)	  
+	    //document.getElementById('result').innerText='<u>台灣雅虎</u>';
+	    document.getElementById('result').innerHTML='<u>台灣雅虎</u>';	    
+	  }	
+	</script>
+  </head>
+  
+  <body>
+    <label>名稱 : <label><span id="result">Yahoo</span><p>
+    <input type="button" value="變更" onclick="change_text()">
+  </body> 
+</html>

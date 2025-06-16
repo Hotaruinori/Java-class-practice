@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>變更背景色</title>
+    <style type="text/css">
+      .myblock{
+        width:6cm;
+	    height:10cm;
+      }
+    </style>
+    <script>
+      function change(bcolor,fcolor)
+      {
+        var mycolor2=document.getElementById("mycolor2");
+        mycolor2.style.backgroundColor=bcolor;
+        mycolor2.style.color=fcolor;
+        // document.body.style.backgroundColor = bcolor;
+        // document.body.style.color = fcolor;
+
+
+      }
+    </script>
+  </head>
+  
+  <body id="mycolor2" style="background-color: aqua;">
+    <form>
+      <input type="radio" name="color" onclick="change('red','#fff');">紅色背景<br>
+      <input type="radio" name="color" onclick="change('green','#f0f');">綠色背景<br>
+      <input type="radio" name="color" onclick="change('blue','#ff0');">藍色背景<br>
+      <input type="radio" name="color" onclick="change('white','#000');">白色背景<br>
+    </form>
+    <p></p>
+    <div id="mycolor" name="mycolor" class="myblock">
+      <span style="font-size:1cm">選擇背景色</span>
+    </div>
+  </body>
+</html>
