@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+	<title>變更文字</title>
+    <script>
+      function change_string()
+	  {
+        var newstring=document.getElementById("textfield").value;
+        document.getElementById("string").innerHTML=newstring;
+      }
+    </script>
+  </head>
+  
+  <body>	
+    <p id="string" style="font-size:1cm">請輸入新文字來改變原文字</p>
+    <input type="text" id="textfield">
+    <input type="button" value="變更文字" onclick="change_string()">
+  </body>
+</html>

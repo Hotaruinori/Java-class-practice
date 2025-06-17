@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>型別轉換</title>
+  </head>
+  <body style="font-size:1cm">
+	<script>
+      let n="2"; 
+	  let m="2.1416"; 
+	  k=123, bin="10100";
+	  
+	  document.write("n 與 m 資料型別: " + typeof(n) +" 與 " + typeof(m) + "<p>");
+	  document.write(" n + m = " + (n + m) + "<br>");
+	  n=parseInt(n); m=parseFloat(m);
+	  document.write(" n 與 m轉成整數與浮點數後相加 = " + (n + m) + "<br>");
+	  w = m + n + 100;
+	  document.write(" w = m + n + 100 = " + w + "<br>");
+	  document.write(" w 新資料型別 = " + typeof(w) + "<br>");
+	  
+	  str1 = "500";
+	  document.write(" 字串轉成數值 = " + Number(str1)*2 + "<p>");	
+	  document.write("k 資料型別: " + typeof(k) + "<p>")	 
+	  document.write(" k 轉成二進位 = " + k.toString(2) + "<br>");
+	  document.write(" k 轉成八進位 = " + k.toString(8) + "<br>");
+	  document.write(" k 轉成十六進位 = " + k.toString(16) + "<br>");
+	</script>
+ </body>
+</html>

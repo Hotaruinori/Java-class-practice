@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>onChange</title>
+  </head>
+  <body>
+    <h3>onChange</h3>
+    <form method="post" name="login" id="login">
+      <table>
+        <tr bgcolor="#003366">
+	      <td colspan="2"><font color="#FFFFFF">會員登錄</font></td>
+	    </tr>
+	    <tr>
+	      <td>登入系統：</td>
+	      <td><p>
+		    <select name="sel" onchange="alert(this.value);">
+		      <option>選擇登錄系統</option>
+		      <option value="人資系統">人資系統</option>
+		      <option value="生產系統">生產系統</option>
+		      <option value="進貨管理">進貨管理</option>
+		      <option value="出貨管理">出貨管理</option>
+		      <option value="會計系統">會計系統</option>
+		      <option value="出勤管理">出勤管理</option>
+		    </select>
+		    </p>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td >&nbsp;</td>
+	      <td><input type="button" value="登錄" /></td>
+	    </tr>
+      </table>
+    </form>
+  </body>
+</html>

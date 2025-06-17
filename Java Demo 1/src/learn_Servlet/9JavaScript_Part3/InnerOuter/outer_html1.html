@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>讀取欄位內容</title>
+  </head>
+  <body style='font-size:0.5cm'>
+    <script language="javascript">
+      function show_result()
+	  {
+	    //alert(document.getElementById("answer").outerHTML);
+	    alert(document.getElementById("answer").outerText);
+      }
+    </script>
+	
+    10 + 20 = <span id="answer"><b>30</b></span>
+	<p></p>
+	<form>
+      <input type="button" value="顯示結果" onclick="show_result()">
+	</form>
+  <body>
+  
+</html>

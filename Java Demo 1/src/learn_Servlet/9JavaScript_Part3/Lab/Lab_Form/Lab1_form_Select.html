@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>檢查清單</title>
+	<style>
+	  body {font-family:微軟正黑體;}	
+      fieldset {
+	    width:600px;
+	    border-width:3px;
+      }	
+
+      legend {
+	    color:#FFF;
+	    background:#336;
+	    width:4em;
+      }
+	</style>
+    <script>
+      function checkData()
+      {
+	  
+	  
+	  
+      }
+
+    </script>
+  </head>
+  
+  <body>
+    <form action="" method="post" name="form1" id="form1">
+      <fieldset>
+        <legend>客戶資料</legend>
+        <label>地 址：</label>
+        <select name="city" id="city">
+          <option>請選擇縣市</option>
+          <option>台北市</option>
+          <option>新北市</option>
+          <option>桃園市</option>
+          <option>台中市</option>
+          <option>台南市</option>
+          <option>高雄市</option>
+        </select>
+        <input type="text" name="addr" id="addr" size="40" maxlength="200">
+        <br >
+
+      </fieldset>
+      <p><input type="button" name="btn" value="送出" onClick="checkData();"></p>
+    </form>
+  </body>
+  
+</html>

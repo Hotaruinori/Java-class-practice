@@ -1,0 +1,16 @@
+﻿delimiter $$
+create function season(n int) returns char(10)
+begin
+	declare r char(10);
+	case
+	    when n=1 then set r="春";
+		when n=2 then set r="夏";
+		when n=3 then set r="秋";
+		when n=4 then set r="冬";
+		else set r="Unknown";
+	end case;
+	
+    return r;
+end
+$$
+delimiter ;

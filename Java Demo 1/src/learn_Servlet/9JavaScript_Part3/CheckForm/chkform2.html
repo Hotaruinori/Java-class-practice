@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>檢查是否有內容</title>
+    <script language="Javascript">
+      function checkData()
+      {
+        if (document.login.no.value.length==0)
+	    {
+	      window.alert('未輸入帳號');
+		  document.login.no.focus();
+		  document.login.no.select();
+		  return false;
+	    }
+		
+		if (document.login.pwd.value.length==0)
+		{
+	      window.alert('未輸入密碼');
+		  document.login.pwd.focus();
+		  document.login.pwd.select();
+		  return false;
+		}
+		  
+		document.login.submit();
+      }
+    </script>
+  </head>
+  
+  <body>
+    <form name="login" method="post" action="">
+      <fieldset style="width:400px">
+        <legend>登入系統</legend> 
+		<p> 
+        帳號：<input name="no" id="no" type="text" size="20">
+        <p> 
+        密碼：<input name="pwd" id="pwd" type="password" size="20">
+
+      </fieldset>
+      <p>
+	  <input type="button" value="登入" onclick="checkData();">
+      <input type="reset" value="重填">
+    </form>
+  </body>
+  
+</html>

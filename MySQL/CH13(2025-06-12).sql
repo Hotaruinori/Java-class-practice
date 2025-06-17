@@ -71,3 +71,26 @@ Delimiter ;
 -- 執行要數入參數
 select SUM_TWO(10, 30);
 
+
+-- ----------
+Delimiter $$
+drop procedure if exists sum_m$$
+create procedure `sum_m`(IN m int, OUT output int)
+begin
+	declare x int;
+    set x = 1;
+    set output = 0;
+    while x <=m do
+		set output = output + x;
+	set x  = x + 1;
+    end while;
+end $$
+Delimiter ;
+-- ----------
+Delimiter $$
+drop procedure if exists sum_n$$
+create procedure `sum_n`(n int)
+begin
+	select (n+1)*n/2;
+end $$
+Delimiter ;

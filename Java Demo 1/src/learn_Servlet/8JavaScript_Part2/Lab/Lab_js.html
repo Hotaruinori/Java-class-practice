@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>圖片式時鐘</title>
+    <script language="Javascript">
+    function myclock(){
+      var digital = new Date();
+      //要轉字串才能用charAT
+      var hh = digital.getHours().toString().padStart(2, "0");
+      var mm = ("0"+digital.getMinutes());
+      mm = mm.substring(mm.length-2,2);
+      var ss=digital.getSeconds()
+      ss = (ss<=9) ? ("0"+ss).toString() : ss.toString();
+      // 好像下面三種都可以....
+      document.hh1.src="images/"+hh.charAt(0)+".gif"
+      document.hh2.src="images/"+hh.charAt(1)+".gif"
+      window.document.mm1.src="images/"+mm.charAt(0)+".gif"
+      window.document.mm2.src="images/"+mm.charAt(1)+".gif"
+      document.getElementsByName("ss1")[0].src = "images/" + ss.charAt(0) + ".gif";
+      document.getElementsByName("ss2")[0].src = "images/" + ss.charAt(1) + ".gif";
+      setTimeout("myclock()",1000)
+
+
+	  }
+    </script>
+  </head>
+  
+  <body background="images/bg2.gif" onload='myclock()'>
+    <font style="font-size:28px;font-weight:bold;">現在時間是</font>
+    <img src="images/0.gif" name="hh1" width="15" height="25">
+    <img src="images/0.gif" name="hh2" width="15" height="25"> 
+    <img src="images/x.gif" width="15" height="25"> 
+    <img src="images/0.gif" name="mm1" width="15" height="25"> 
+    <img src="images/0.gif" name="mm2" width="15" height="25"> 
+    <img src="images/x.gif" width="15" height="25"> 
+    <img src="images/0.gif" name="ss1" width="15" height="25"> 
+    <img src="images/0.gif" name="ss2" width="15" height="25"> 
+  </body> 
+</html>

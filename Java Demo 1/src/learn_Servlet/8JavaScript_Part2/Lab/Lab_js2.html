@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文字跑馬燈</title>
+	<script language="JavaScript">
+  var currentIndex = 0;
+  var myboard = "歡迎光臨旅遊資訊網!                      ";
+  var isRunning = true;
+  function on() {
+    isRunning = true;
+    myLED_board();
+    //disable按鈕
+    document.getElementsByName("btn_on")[0].disabled = true;
+    document.getElementsByName("btn_off")[0].disabled = false;
+  }
+  function off() {
+    isRunning = false;
+    //disable按鈕
+    document.getElementsByName("btn_off")[0].disabled = true;
+    document.getElementsByName("btn_on")[0].disabled = false;
+  }
+  function myLED_board() {
+      if (!isRunning) return;
+      var displayText = myboard.substring(currentIndex) + myboard.substring(0, currentIndex);
+      document.getElementsByName("myname")[0].value = displayText;
+      currentIndex = (currentIndex + 1) % myboard.length;
+      setTimeout(myLED_board, 300); 
+  }
+	</script>
+	<style>
+	  .ss{
+	      font-size:0.8cm;
+		  color:red;
+          background:#ff0;		  
+	  }	   
+	</style>
+	
+  </head>
+  <body onload='myLED_board()'>
+    <form name="myform">
+      <input class="ss" type="text" name="myname" size="27" value="歡迎光臨旅遊資訊網$$$$$!　　　　　"><p>
+      <input type="button" value="開始" name="btn_on" onclick="on()"> 
+	  <input type="button" value="暫停" name="btn_off" onclick="off()"> 
+    </form>
+ 
+  </body>
+  
+</html>
