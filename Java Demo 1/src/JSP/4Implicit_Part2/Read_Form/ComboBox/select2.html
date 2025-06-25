@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>清單方塊</title>
+    
+    <script>
+      function check_select()
+      {
+    	  var select_index;
+    	  //select_index=document.myform.book.selectedIndex;
+    	  select_index=document.all.book.selectedIndex;
+    	  
+    	  if(select_index>=0)
+    	  {
+    		  document.myform.submit();
+    	  }
+    	  else
+    	  {
+    		  alert("未選取 !!");
+    		  return false;
+    	  }
+      }
+    
+    </script>   
+  </head>
+  
+  <body>
+    <form action="select2_Final.jsp" method="get" name="myform">     
+      <label style='color:blue;font-size:24px'>科目(複選):</label><br>
+      <select name="book" size=4  multiple="multiple">
+	    <option value="book1">多媒體技術與應用</option>
+	    <option value="book2">網路概論</option>
+	    <option value="book3">程式設計</option>
+	    <option value="book4">數位影像處理</option>
+	    <option value="book5">電腦繪圖與動畫</option>
+	    <option value="book6">資料庫概論</option>
+	  </select>
+      <p>
+              
+      <input type="button" value = "確定" onclick="check_select()">
+      <input type="reset" value = "取消">
+    </form>
+  </body>
+</html>

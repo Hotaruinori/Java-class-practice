@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>基本資料</title>	
+  </head>
+
+  <body>
+	<h3>輸入以下資料</h3>
+	<form method="post" action="Lab1_Form_Read.jsp">
+	  姓名：<input type="text" name="field1" size="5">
+	  <p>性別：</p>
+      <p><input type="radio" name="field2" value="male" checked>男
+         <input type="radio" name="field2" value="female">女
+	  </p>
+  
+	  <p>婚姻：</p>  
+	  <p><input type="radio" name="field3" value="married">已婚
+		 <input type="radio" name="field3" value="unmarried" checked>未婚
+	  </p>
+  
+	  <p>喜歡的球類運動(可複選)：
+        <input type="checkbox" name="field4" value="撞球">撞球   
+        <input type="checkbox" name="field4" value="籃球">籃球   
+        <input type="checkbox" name="field4" value="桌球">桌球   
+        <input type="checkbox" name="field4" value="網球">網球 
+        <input type="checkbox" name="field4" value="排球">排球
+        <input type="checkbox" name="field4" value="足球">足球
+      </p>
+  
+	  <p> 
+        <input type="submit" value="傳送">
+        <input type="reset" value="重填">
+	  </p> 
+	</form> 
+  </body>
+</html>
