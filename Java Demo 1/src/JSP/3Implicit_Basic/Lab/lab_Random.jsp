@@ -1,5 +1,4 @@
 ﻿<%@ page contentType="text/html;charset=utf-8" %>
-<%@ page import="java.util.*" %>
 
 <html>
   <meta charset="utf-8">
@@ -9,21 +8,8 @@
 	
     <%
 	  //Insert code here
-	String beginParam = request.getParameter("begin");
-    boolean isclicked = "ok".equals(beginParam); // 避免 NullPointerException
-    
-    
-    if(isclicked){
-		 Random rnd=new Random();
-	     int no = rnd.nextInt(10);
-	     String imgPath = "picture/" + no + ".jpg"; 
-    
-    %>
-   <span>
-    <img src="<%= imgPath %>" alt="隨機圖片"></span>
-    
-    <%
-    }
+	  
+	  
     %>
 	
 	<form method="post" action="lab_Random.jsp">

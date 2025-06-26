@@ -1,0 +1,96 @@
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+	<title>基本資料</title>
+    <script>
+    	function checkData()
+      	{
+	  		let formdata=document.form1;
+	    	let field1=formdata.field1;
+			let field2=document.all("field2");
+			let field3=document.all["field3"];
+			let field4=document.getElementsByName("field4")
+	    	let ok;
+		
+			if(field1.value.length==0)
+			{
+		  		window.alert('姓名未輸入');
+		  		formdata.field1.focus();
+		  		return false;
+			}
+		
+			ok=false;
+			for(let i=0; i<field2.length; i++)
+			{
+          		if(field2[i].checked) ok=true;
+
+        	}
+		
+			if(!ok)
+			{
+		  		window.alert('性別未選取');
+		  		formdata.field2.focus();
+		  		return false;
+			}
+
+        	ok=false;
+			for(let i=0; i<field3.length; i++)
+			{
+          		if(field3[i].checked) ok=true;
+        	}
+		
+			if(!ok)
+			{
+		  		window.alert('婚姻狀況未選取');
+		  		formdata.field3.focus();
+		  		return false;
+			}
+
+        	ok=false;			
+			for(let i=0; i<field4.length; i++)
+			{
+          		if(field4[i].checked) ok=true;
+        	}
+			
+			if(!ok)
+			{
+		  		window.alert('球類運動未選取');
+		  		formdata.field4.focus();
+		  		return false;	
+        	}
+
+			formdata.submit();
+	  	}
+    </script>	
+  </head>
+
+  <body>
+	<h3>輸入以下資料</h3>
+	<form name="form1" method="post" action="Lab1_Form_Read_OK.jsp">
+	  姓名：<input type="text" name="field1" size="5">
+	  <p>性別：</p>
+      <p><input type="radio" name="field2" value="male">男
+         <input type="radio" name="field2" value="female">女
+	  </p>
+  
+	  <p>婚姻：</p>  
+	  <p><input type="radio" name="field3" value="married">已婚
+		 <input type="radio" name="field3" value="unmarried">未婚
+	  </p>
+  
+	  <p>喜歡的球類運動(可複選)：
+        <input type="checkbox" name="field4" value="撞球">撞球   
+        <input type="checkbox" name="field4" value="籃球">籃球   
+        <input type="checkbox" name="field4" value="桌球">桌球   
+        <input type="checkbox" name="field4" value="網球">網球 
+        <input type="checkbox" name="field4" value="排球">排球
+        <input type="checkbox" name="field4" value="足球">足球
+      </p>
+  
+	  <p> 
+        <input type="button" name="btn" value="傳送" onClick="checkData()">
+        <input type="reset" value="重填">
+	  </p> 
+	</form> 
+  </body>
+</html>
