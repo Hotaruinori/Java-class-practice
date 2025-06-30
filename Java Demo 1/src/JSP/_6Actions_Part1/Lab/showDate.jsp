@@ -1,6 +1,6 @@
 <!-- ************* showDate.jsp ************* -->
 <%@ page contentType="text/html;charset=utf-8" %>
-<%@page import="com.ted.CalendarBean" %>
+<%@ page import="com.ted.LocalDateTimeBean"  %>
 
 <html>
   <head>
@@ -9,7 +9,14 @@
   <body style='font-size:0.5cm'>
     <font size="6"><b>今天日期</b></font><p>
 
+
     <jsp:useBean id= "dateBean" scope= "session" class= "com.ted.LocalDateTimeBean" />
+    <%
+	request.setCharacterEncoding("utf-8");
+    dateBean.setYear(); 
+    dateBean.setMonth(); 
+    dateBean.setDay(); 
+    %>
 	年：
     <jsp:getProperty name= "dateBean" property= "year" /><br>
 	月：
@@ -19,10 +26,11 @@
     
 	<font size="4"><b>今天日期<p>
     <%
-	  request.setCharacterEncoding("utf-8");
-      out.print("年：" + dateBean.getYear() + "<br>");
-      out.print("月：" + dateBean.getMonth() + "<br>");
-      out.print("日：" + dateBean.getDay());
+
+
+    out.print("年：" + dateBean.getYear() + "<br>");
+    out.print("月：" + dateBean.getMonth() + "<br>");
+    out.print("日：" + dateBean.getDay());
     %>
 	</b></font>
   </body> 

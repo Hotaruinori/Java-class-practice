@@ -1,4 +1,4 @@
-
+package JSP._6Actions_Part1.DateTime;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,13 +9,13 @@ public class ShowDate2
     public static void main(String[] args) 
     {
         DateFormat df1,df2;
-        System.out.println("¨Ï¥Îdefault®æ¦¡");
+        System.out.println("ä½¿ç”¨defaultæ ¼å¼");
         df1 = DateFormat.getInstance();
         
         System.out.println(df1.format(new Date()));
         System.out.println();
 
-        System.out.println("¨Ï¥Î¦Û­q®æ¦¡");
+        System.out.println("ä½¿ç”¨è‡ªè¨‚æ ¼å¼");
         String fmt = "y-M-d  E  HH:mm:ss  D";
         df2 = new SimpleDateFormat(fmt, Locale.TAIWAN);
         //df2 = new SimpleDateFormat(fmt, Locale.US);
@@ -26,21 +26,21 @@ public class ShowDate2
 
 
 /*
- * y:¦è¤¸¦~
- * Y:¦è¤¸¦~
+ * y:è¥¿å…ƒå¹´
+ * Y:è¥¿å…ƒå¹´
  * w:week in year
  * W:week in month
- * E:¬P´Á
- * M:¤ë¥÷
- * MMM:¤ë¥÷ªº­^¤åÁY¼g
- * MMMM:¤ë¥÷ªº­^¤å
+ * E:æ˜ŸæœŸ
+ * M:æœˆä»½
+ * MMM:æœˆä»½çš„è‹±æ–‡ç¸®å¯«
+ * MMMM:æœˆä»½çš„è‹±æ–‡
  * d:day in month
  * D:day in year
- * h:12¤p®É¨î
- * H:24¤p®É¨î
- * m:¤À
- * s:¬í
+ * h:12å°æ™‚åˆ¶
+ * H:24å°æ™‚åˆ¶
+ * m:åˆ†
+ * s:ç§’
  * a:AM/PM
  *
- * ¥i¥H«ü©w¦ì¼Æ ¦p yyyy-MM-dd
+ * å¯ä»¥æŒ‡å®šä½æ•¸ å¦‚ yyyy-MM-dd
  */

@@ -1,4 +1,4 @@
-
+package JSP._6Actions_Part1.DateTime;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -8,26 +8,26 @@ public class ShowDate3
     {
         Calendar now = Calendar.getInstance();
        
-        System.out.println("²{¦b®É¨è:");
+        System.out.println("ç¾åœ¨æ™‚åˆ»:");
         
-        //Åã¥Ü¦è¤¸(AD)¡B¦è¤¸«e(BC)
+        //é¡¯ç¤ºè¥¿å…ƒ(AD)ã€è¥¿å…ƒå‰(BC)
         System.out.print( now.getDisplayName(Calendar.ERA, Calendar.LONG, 
                                                                Locale.US ));
-        //Åã¥Ü¦~¥÷                                                       
+        //é¡¯ç¤ºå¹´ä»½                                                       
         System.out.println( now.get(Calendar.YEAR) );
         
-        //Åã¥Ü¤ë¥÷   
+        //é¡¯ç¤ºæœˆä»½   
         System.out.println( now.getDisplayName(Calendar.MONTH, Calendar.LONG,
                                                                 Locale.US));
-        System.out.println( (now.get(Calendar.MONTH)+1) +"¤ë");
+        System.out.println( (now.get(Calendar.MONTH)+1) +"æœˆ");
                                                                 
-        //Åã¥Ü¤é¼Æ   
-        System.out.printf("%d ¤é%n",now.get(Calendar.DAY_OF_MONTH));
+        //é¡¯ç¤ºæ—¥æ•¸   
+        System.out.printf("%d æ—¥%n",now.get(Calendar.DAY_OF_MONTH));
         
-        //Åã¥Ü¬P´Á¦WºÙ
+        //é¡¯ç¤ºæ˜ŸæœŸåç¨±
         System.out.println( now.getDisplayName(Calendar.DAY_OF_WEEK, 
                                                      Calendar.LONG, Locale.TAIWAN));
-        //Åã¥Ü®É¶¡   
+        //é¡¯ç¤ºæ™‚é–“   
         System.out.printf("%d:%d:%d\n",now.get(Calendar.HOUR), now.get(Calendar.MINUTE), now.get(Calendar.SECOND));
                                                      
     }   
@@ -35,17 +35,17 @@ public class ShowDate3
 
 
 /*
- * ±`¥ÎÄİ©Ê -
- * ERA: ¦è¤¸/¦è¤¸«e
- * YEAR: ¦è¤¸¦~
- * MONTH: ¤ë¥÷
- * DAY_OF_WEEK: ¬P´Á
- * DAY_OF_MONTH: ¤é¼Æ
- * HOUR: ®É
- * MINUTE: ¤À
- * SECOND: ¬í
- * ®æ¦¡Ãş -
- * LONG: §¹¾ã¦WºÙ
- * SHORT: ÁY¼g¦WºÙ
+ * å¸¸ç”¨å±¬æ€§ -
+ * ERA: è¥¿å…ƒ/è¥¿å…ƒå‰
+ * YEAR: è¥¿å…ƒå¹´
+ * MONTH: æœˆä»½
+ * DAY_OF_WEEK: æ˜ŸæœŸ
+ * DAY_OF_MONTH: æ—¥æ•¸
+ * HOUR: æ™‚
+ * MINUTE: åˆ†
+ * SECOND: ç§’
+ * æ ¼å¼é¡ -
+ * LONG: å®Œæ•´åç¨±
+ * SHORT: ç¸®å¯«åç¨±
  */
  

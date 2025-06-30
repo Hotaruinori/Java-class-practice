@@ -1,11 +1,11 @@
-
+package JSP._6Actions_Part1.DateTime;
 import java.util.*;
 
 public class ShowDate 
 {
     public static void main(String[] args) 
     {
-        Date today = new Date(); //²{¦bªº¦~¤ë¤é®É¤À¬í
+        Date today = new Date(); //ç¾åœ¨çš„å¹´æœˆæ—¥æ™‚åˆ†ç§’
                 
         System.out.println(today.getYear());
         System.out.println(today.getMonth());
