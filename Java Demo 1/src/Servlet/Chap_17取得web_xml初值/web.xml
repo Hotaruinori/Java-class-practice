@@ -6,10 +6,20 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
   version="4.0"
   metadata-complete="true">
-  <!-- 所有的 Servlet 都可以讀取 -->
+  
   <context-param>
 	<param-name>webname</param-name>
-	<param-value>人資管理</param-value>
+	<param-value>***人資管理***</param-value>
   </context-param>
+  
+  <servlet>
+	<servlet-name>ReadContextInitDataServlet</servlet-name>
+	<servlet-class>ReadContextInitDataServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ReadContextInitDataServlet</servlet-name>
+	<url-pattern>/doABC</url-pattern>
+  </servlet-mapping>
   
 </web-app>

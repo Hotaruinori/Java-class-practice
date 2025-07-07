@@ -13,25 +13,24 @@ import javax.servlet.http.HttpServletResponse;
 //@WebServlet("/doReadInit")
 public class ReadContextInitDataServlet extends HttpServlet {
 	// insert code
-
+	ServletConfig cfg;
+	String web="";
+	
 	public void init(ServletConfig config) throws ServletException
 	{
+		super.init(config);
+		this.cfg=config;
 	}
-	
-	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
-	}	
-	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		// insert code
+		ServletContext context=cfg.getServletContext();
+		web=context.getInitParameter("webname");
 		
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out=response.getWriter();
+		out.print("<h1>" + web + "</h1>");
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	
 }
