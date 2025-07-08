@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
-	<classpathentry kind="src" path="src/LineNotify"/>
-	<classpathentry kind="src" path="src/LineMessage"/>
-	<classpathentry excluding="LineNotify/|LineMessage/" kind="src" path="src"/>
-	<classpathentry kind="lib" path="d:/Projects/lib/mariadb-java-client-2.4.3.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>

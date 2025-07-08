@@ -37,3 +37,21 @@ public class ShowString extends Frame {
         });
     }
 }
+
+/**
+為什麼需要 super.paint(g)？
+1. 繼承鏈的繪圖責任
+	Frame 繼承自 Window → Container → Component，每個父類別的 paint() 方法都有各自的繪圖工作：
+	Component.paint()：繪製基本組件邊框和背景
+	Container.paint()：繪製子組件
+	Window/Frame.paint()：繪製標題列、邊框等視窗元素
+	
+	若跳過 super.paint(g)，這些基礎繪製會被忽略，可能導致：
+	背景未清除（殘留前幀畫面）
+	子組件消失
+	視窗裝飾（如標題列）異常
+
+2. 雙緩衝問題
+	AWT 使用雙緩衝技術時，super.paint(g) 會確保緩衝區正確初始化。跳過它可能導致畫面閃爍或殘影。
+
+**/
